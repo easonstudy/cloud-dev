@@ -1,0 +1,21 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.ScoreAuditReceiptDao">
+    <sql id="BASE_COLUMN">
+       id,audit_id,serial_no,receipt_num,shops_id,shops_name,total_price,total_num,order_num,pay_flag,state,create_time,update_time, remark
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_score_audit_receipt (<include refid="BASE_COLUMN"/>)
+        values (#{id}, #{auditId,jdbcType=INTEGER}, #{serialNo,jdbcType=VARCHAR},
+        #{receiptNum,jdbcType=VARCHAR},#{shopsId,jdbcType=INTEGER},
+        #{shopsName,jdbcType=VARCHAR}, #{totalPrice,jdbcType=DOUBLE}, #{totalNum,jdbcType=INTEGER},
+        #{orderNum,jdbcType=VARCHAR}, #{payFlag,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER},
+        #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{remark, jdbcType=VARCHAR})
+    </insert>
+
+
+
+</mapper>

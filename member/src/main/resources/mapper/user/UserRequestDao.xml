@@ -1,0 +1,38 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.UserRequestDao">
+
+    <sql id="BASE_COLUMN">
+        id, open_id, nick_name, sex, email, phone, create_time
+    </sql>
+
+    <insert id="insert" parameterType="Object" >
+        INSERT INTO t_user_request (<include refid="BASE_COLUMN" />)
+        VALUES(#{id}, #{openId}, #{nickName}, #{sex}, #{email}, #{phone}, #{createTime})
+    </insert>
+
+    <select id="findByUserRequest" parameterType="UserRequestDto" resultType="UserRequestDto" >
+        SELECT
+        <include refid="BASE_COLUMN" />
+        FROM t_user_request
+        WHERE 1=1
+        <if test="openId != null">
+            and open_id = #{openId}
+        </if>
+        <if test="nickName != null">
+            and nick_name = #{nickName}
+        </if>
+        <if test="phone != null">
+            and phone = #{phone}
+        </if>
+        <if test="email != null">
+            and email = #{email}
+        </if>
+        <if test="createTime != null">
+            and DATE_FORMAT(create_time,'%Y-%m-%d') = DATE_FORMAT(#{createTime},'%Y-%m-%d')
+        </if>
+    </select>
+
+</mapper>

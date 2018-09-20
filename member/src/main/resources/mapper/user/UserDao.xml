@@ -1,0 +1,127 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.UserDao">
+
+    <resultMap id="userResult" type="UserDto">
+        <id property="id" column="id"/>
+        <association property="userBalance" column="id" javaType="com.cjcx.member.entity.UserBalance"
+                     select="com.cjcx.member.dao.UserBalanceDao.findById">
+        </association>
+    </resultMap>
+
+    <sql id="BASE_COLUMN">
+        id, wechat_id, open_id, nick_name, phone, code, email, is_delete, create_time, update_time, code_expire_time
+    </sql>
+
+    <sql id="USER_BASE_COLUMN">
+        u.id, u.wechat_id, u.open_id, u.nick_name, u.phone, u.code, u.email, u.is_delete, u.create_time, u.update_time, u.code_expire_time
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        INSERT INTO t_user (<include refid="BASE_COLUMN"/>)
+        VALUES(#{id}, #{wechatId}, #{openId}, #{nickName}, #{phone}, #{code}, #{email}, #{isDelete}, #{createTime},
+        #{createTime},#{codeExpireTime})
+    </insert>
+
+
+    <update id="updateById" parameterType="UserDto">
+        UPDATE t_user SET
+        <if test="openId != null">
+            open_id = #{openId},
+        </if>
+        <if test="nickName != null">
+            nick_name = #{nickName},
+        </if>
+        <if test="phone != null">
+            phone = #{phone},
+        </if>
+        <if test="code != null">
+            code = #{code},
+        </if>
+        <if test="email != null">
+            email = #{email},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="codeExpireTime != null">
+            code_expire_time = #{codeExpireTime},
+        </if>
+        update_time = sysdate()
+        WHERE id=#{id}
+    </update>
+
+    <select id="findById" resultMap="userResult">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_user WHERE id=#{id}
+    </select>
+
+    <select id="findByLoginName" resultMap="userResult">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_user WHERE
+        open_id = #{loginName} or phone = #{loginName} or email = #{loginName}
+    </select>
+
+    <select id="findAll" resultMap="userResult">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_user
+    </select>
+
+    <select id="findByCondition" resultType="UserDto" parameterType="UserDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM
+        t_user
+        WHERE 1=1
+        <if test="openId != null">
+            and open_id = #{openId}
+        </if>
+        <if test="nickName != null">
+            and nick_name = #{nickName}
+        </if>
+        <if test="phone != null">
+            and phone = #{phone}
+        </if>
+        <if test="code != null">
+            and code = #{code}
+        </if>
+        <if test="email != null">
+            and email = #{email}
+        </if>
+    </select>
+
+    <select id="findUserListByCondition" resultType="UserDto" parameterType="UserDto">
+        select
+        <include refid="USER_BASE_COLUMN"/>
+        ,IFNULL(ub.score,0) score
+        from
+        (SELECT * FROM t_user WHERE 1=1
+        <if test="openId != null">
+            and open_id = #{openId}
+        </if>
+        <if test="nickName != null">
+            and nick_name = #{nickName}
+        </if>
+        <if test="phone != null">
+            and phone = #{phone}
+        </if>
+        <if test="code != null">
+            and code = #{code}
+        </if>
+        <if test="email != null">
+            and email = #{email}
+        </if>
+        ) u
+        LEFT JOIN
+        t_user_balance ub
+        ON u.id = ub.user_id
+
+    </select>
+
+
+</mapper>

@@ -1,0 +1,62 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.TransactionDao">
+
+    <sql id="BASE_COLUMN">
+        id, account_day, user_id, open_id, phone, type, unique_id, amount, score, insert_mode, state, create_time, create_by, update_time
+    </sql>
+
+    <select id="storageScore" parameterMap="storageScoreMap" statementType="CALLABLE" >
+        call SP_TRANSACTION (?, ?, ?, ?, ?, ?, ?)
+    </select>
+    <parameterMap type="java.util.Map" id="storageScoreMap">
+        <parameter property="userTag"   mode="IN"    jdbcType="VARCHAR"/>
+        <parameter property="uniqueId"  mode="IN"    jdbcType="VARCHAR"/>
+        <parameter property="amount"    mode="IN"    jdbcType="DOUBLE"/>
+        <parameter property="type"      mode="IN"    jdbcType="INTEGER"/>
+        <parameter property="insertMode" mode="IN"   jdbcType="VARCHAR"/>
+        <parameter property="createUser" mode="IN"   jdbcType="VARCHAR"/>
+        <parameter property="state_out"  mode="OUT"  jdbcType="VARCHAR"/>
+    </parameterMap>
+
+    <select id="searchTransaction" resultType="TransactionDto">
+        SELECT
+          <include refid="BASE_COLUMN" />
+        FROM t_transaction
+        WHERE 1=1
+        <if test="userId != null">
+            and user_id = #{userId}
+        </if>
+        <if test="openId != null">
+            and open_id = #{openId}
+        </if>
+        <if test="phone != null">
+            and phone = #{phone}
+        </if>
+        <if test="uniqueId != null">
+            and unique_id = #{uniqueId}
+        </if>
+    </select>
+
+    <select id="findByCondition" resultType="TransactionDto" parameterType="TransactionDto">
+        SELECT
+          <include refid="BASE_COLUMN" />
+        FROM
+        t_transaction
+        WHERE 1=1
+        <if test="userId != null">
+            and user_id = #{userId}
+        </if>
+        <if test="phone != null">
+            and phone = #{phone}
+        </if>
+        <if test="uniqueId != null">
+            and unique_id = #{uniqueId}
+        </if>
+    </select>
+
+
+
+</mapper>

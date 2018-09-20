@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.pay.dao.SystemParamDao">
+
+    <sql id="BASE_COLUMN">
+        id, param_name, param_key, param_value, remark, ordering
+    </sql>
+
+    <select id="findAll" resultType="SystemParamDto" >
+        SELECT
+        <include refid="BASE_COLUMN" />
+        FROM t_system_param
+    </select>
+
+</mapper>

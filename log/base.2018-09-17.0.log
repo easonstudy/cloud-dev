@@ -1,0 +1,1 @@
+[INFO ] 18:11:57.892 [main] com.cjcx.pay.utils.HttptUtils - 发送GET请求出现异常！java.net.MalformedURLException: no protocol: wwww.baidu.com

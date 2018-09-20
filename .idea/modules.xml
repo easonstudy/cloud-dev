@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ai-server/ai-server.iml" filepath="$PROJECT_DIR$/ai-server/ai-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cloud-dev.iml" filepath="$PROJECT_DIR$/.idea/cloud-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lottery/lottery.iml" filepath="$PROJECT_DIR$/lottery/lottery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-pay/mall-pay.iml" filepath="$PROJECT_DIR$/mall-pay/mall-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mall-server/mall-server.iml" filepath="$PROJECT_DIR$/mall-server/mall-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/member/member.iml" filepath="$PROJECT_DIR$/member/member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/open/open.iml" filepath="$PROJECT_DIR$/open/open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pricture/pricture.iml" filepath="$PROJECT_DIR$/pricture/pricture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socket-server/socket-server.iml" filepath="$PROJECT_DIR$/socket-server/socket-server.iml" />
+    </modules>
+  </component>
+</project>

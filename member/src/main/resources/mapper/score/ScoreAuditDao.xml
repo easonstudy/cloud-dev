@@ -1,0 +1,160 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.ScoreAuditDao">
+    <sql id="BASE_COLUMN">
+        id, phone, user_id, url, staff_id, shops_id, tr_id, state, user_remark, staff_remark, update_time, update_by, create_time, create_by
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"  parameterType="Object">
+        insert into t_score_audit (<include refid="BASE_COLUMN"/>)
+        values (#{id}, #{phone,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},
+        #{userId,jdbcType=INTEGER}, #{shopsId,jdbcType=INTEGER}, #{trId,jdbcType=INTEGER},
+        #{state,jdbcType=INTEGER}, #{userRemark,jdbcType=VARCHAR}, #{staffRemark,jdbcType=VARCHAR},
+        #{updateTime,jdbcType=TIMESTAMP},
+        #{updateBy,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateById" parameterType="UserLevelDto">
+        update t_score_audit
+        set
+        <if test="phone != null">
+            phone = #{phone,jdbcType=VARCHAR},
+        </if>
+        <if test="userId != null">
+            user_id = #{userId,jdbcType=INTEGER},
+        </if>
+        <if test="url != null">
+            url = #{url,jdbcType=VARCHAR},
+        </if>
+        <if test="staffId != null">
+            staff_id = #{staffId,jdbcType=INTEGER},
+        </if>
+        <if test="shopsId != null">
+            shops_id = #{shopsId,jdbcType=INTEGER},
+        </if>
+        <if test="trId != null">
+            tr_id = #{trId,jdbcType=INTEGER},
+        </if>
+        <if test="state != null">
+            state = #{state,jdbcType=INTEGER},
+        </if>
+        <if test="userRemark != null">
+            user_remark = #{userRemark,jdbcType=VARCHAR},
+        </if>
+        <if test="staffRemark != null">
+            staff_remark = #{staffRemark,jdbcType=VARCHAR},
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy,jdbcType=VARCHAR},
+        </if>
+        <if test="createTime != null">
+            create_time = #{createTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="createBy != null">
+            create_by = #{createBy,jdbcType=VARCHAR},
+        </if>
+        update_time = now()
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="findById" resultType="ScoreAuditDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM
+        t_score_audit WHERE id=#{id}
+    </select>
+
+    <select id="findByCondition" resultType="ScoreAuditDto" parameterType="ScoreAuditDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_score_audit
+        WHERE 1=1
+        <if test="phone != null">
+            and phone = #{phone,jdbcType=VARCHAR}
+        </if>
+        <if test="userId != null">
+            and user_id = #{userId,jdbcType=INTEGER}
+        </if>
+        <if test="url != null">
+            and url = #{url,jdbcType=VARCHAR}
+        </if>
+        <if test="staffId != null">
+            and staff_id = #{staffId,jdbcType=INTEGER}
+        </if>
+        <if test="shopsId != null">
+            and shops_id = #{shopsId,jdbcType=INTEGER}
+        </if>
+        <if test="trId != null">
+            and tr_id = #{trId,jdbcType=INTEGER}
+        </if>
+        <if test="state != null">
+            and state = #{state,jdbcType=INTEGER}
+        </if>
+        <if test="userRemark != null">
+            and user_remark = #{userRemark,jdbcType=VARCHAR}
+        </if>
+        <if test="staffRemark != null">
+            and staff_remark = #{staffRemark,jdbcType=VARCHAR}
+        </if>
+        <if test="updateTime != null">
+            and update_time = #{updateTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="updateBy != null">
+            and update_by = #{updateBy,jdbcType=VARCHAR}
+        </if>
+        <if test="createTime != null">
+            and create_time = #{createTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="createBy != null">
+            and create_by = #{createBy,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <select id="getScoreAuditList" resultType="ScoreAuditDto" parameterType="FilterDto">
+        select
+        a.id,
+        a.url,
+        a.state,
+        a.staff_remark staffRemark,
+        a.update_time,
+        -- 处理人(管理员)
+        a.update_by,
+        a.create_time,
+        u.nick_name userNickName,
+        u.phone userPhone,
+        -- 兑换的金额
+        tr.amount,
+        tr.score
+        from
+        (
+        select * from t_score_audit where 1=1
+        <if test="ticketType != null and ticketType == 2">
+            -- 排除未审核 和待审核 小票
+            and state !=0 and state !=2
+        </if>
+        <if test="userId != null">
+            and user_id = #{userId}
+        </if>
+        ) a
+        LEFT JOIN t_transaction tr on a.tr_id=tr.id
+        LEFT JOIN t_staff m on a.staff_id = m.id
+        LEFT JOIN t_user u on a.user_id = u.id
+    </select>
+
+
+    <select id="storageScoreAudit" parameterMap="storageScoreAuditMap" statementType="CALLABLE">
+        call SP_TRANSACTION_AUDIT (?, ?, ?, ?, ?, ?)
+    </select>
+    <parameterMap type="java.util.Map" id="storageScoreAuditMap">
+        <parameter property="t_audit_id" mode="IN" jdbcType="INTEGER"/>
+        <parameter property="t_state" mode="IN" jdbcType="INTEGER"/>
+        <parameter property="t_shops_id" mode="IN" jdbcType="INTEGER"/>
+        <parameter property="t_amount" mode="IN" jdbcType="DOUBLE"/>
+        <parameter property="t_score" mode="IN" jdbcType="DOUBLE"/>
+        <parameter property="state" mode="OUT" jdbcType="VARCHAR"/>
+    </parameterMap>
+
+
+</mapper>

@@ -1,0 +1,19 @@
+[INFO ] 11:52:22.193 [main] com.cjcx.mall.MallApplication - Starting MallApplication on guo-PC with PID 8372 (C:\Users\guo\workspace\idea\cloud-dev\mall-server\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 11:52:22.303 [main] com.cjcx.mall.MallApplication - No active profile set, falling back to default profiles: default
+[INFO ] 11:52:27.203 [main] c.c.m.f.druid.DataBaseConfiguration - 注入druid
+[INFO ] 11:52:27.771 [main] c.c.m.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 11:52:27.927 [main] c.c.m.framework.config.RedisConfig - Redis地址：120.79.210.194:6379
+[INFO ] 11:52:27.928 [main] c.c.m.framework.config.RedisConfig - 注入JedisPool成功！！
+[INFO ] 11:55:16.848 [main] com.cjcx.mall.MallApplication - Starting MallApplication on guo-PC with PID 10216 (C:\Users\guo\workspace\idea\cloud-dev\mall-server\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 11:55:16.853 [main] com.cjcx.mall.MallApplication - No active profile set, falling back to default profiles: default
+[INFO ] 11:55:21.502 [main] c.c.m.f.druid.DataBaseConfiguration - 注入druid
+[INFO ] 11:55:21.917 [main] c.c.m.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 11:55:22.023 [main] c.c.m.framework.config.RedisConfig - Redis地址：120.79.210.194:6379
+[INFO ] 11:55:22.025 [main] c.c.m.framework.config.RedisConfig - 注入JedisPool成功！！
+[INFO ] 11:59:04.588 [main] com.cjcx.mall.MallApplication - Starting MallApplication on guo-PC with PID 8432 (C:\Users\guo\workspace\idea\cloud-dev\mall-server\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 11:59:04.593 [main] com.cjcx.mall.MallApplication - No active profile set, falling back to default profiles: default
+[INFO ] 11:59:09.227 [main] c.c.m.f.druid.DataBaseConfiguration - 注入druid
+[INFO ] 11:59:09.667 [main] c.c.m.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 11:59:09.778 [main] c.c.m.framework.config.RedisConfig - Redis地址：120.79.210.194:6379
+[INFO ] 11:59:09.783 [main] c.c.m.framework.config.RedisConfig - 注入JedisPool成功！！
+[INFO ] 11:59:13.917 [main] com.cjcx.mall.MallApplication - Started MallApplication in 10.212 seconds (JVM running for 13.034)

@@ -1,0 +1,37 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.PermissionsDao">
+
+    <sql id="BASE_COLUMN">
+        id, path, component, redirect, name, icon_cls, menu_show, leaf, level, parent_id, details, ordering
+    </sql>
+
+    <select id="findAll" resultType="PermissionsDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_permissions
+        order by ordering
+    </select>
+
+    <select id="getPermissionsByRoleId" resultType="PermissionsDto">
+        select
+            p.id,
+            p.path,
+            p.component,
+            p.redirect,
+            p.name,
+            p.icon_cls,
+            p.menu_show,
+            p.leaf,
+            p.level,
+            p.parent_id,
+            p.ordering,
+            rp.details
+        from t_role_permissions rp, t_permissions p
+        where  rp.role_id=#{roleId} and rp.permissions_id=p.id
+        order by p.ordering
+    </select>
+
+</mapper>

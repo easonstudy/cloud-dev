@@ -1,0 +1,79 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.pay.dao.ShopsBarcodeDao">
+    <sql id="BASE_COLUMN">
+        id, shops_id, name, wechat_code, barcode, amount, discount, remark, is_delete, update_time, update_by, create_time, create_by
+    </sql>
+
+    <sql id="ALIAXS_BASE_COLUMN">
+        sb.id, sb.shops_id, sb.name, sb.wechat_code, sb.barcode, sb.amount, sb.discount, sb.remark, sb.is_delete, sb.update_time, sb.update_by, sb.create_time, sb.create_by
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_shops_barcode (<include refid="BASE_COLUMN"/>)
+        values (#{id}, #{shopsId}, #{name}, #{wechatCode},#{barcode},#{amount},
+        #{isDelete}, #{updateTime,jdbcType=TIMESTAMP},#{updateBy,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="findAll" resultType="ShopsDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_shops_barcode
+    </select>
+
+    <update id="updateById" parameterType="ShopsDto">
+        update t_shops_barcode
+        set
+        <if test="shopsId != null">
+            shops_id = #{shopsId,jdbcType=INTEGER},
+        </if>
+        <if test="name != null">
+            name = #{name},
+        </if>
+        <if test="barcode != null">
+            barcode = #{barcode},
+        </if>
+        <if test="amount != null">
+            amount = #{amount},
+        </if>
+        <if test="wechatCode != null">
+            wechat_code = #{wechatCode},
+        </if>
+        <if test="discount != null">
+            discount = #{discount},
+        </if>
+        <if test="remark != null">
+            remark = #{remark},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy,jdbcType=VARCHAR},
+        </if>
+        update_time = now()
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="getList" resultType="ShopsBarcodeDto" parameterType="FilterDto">
+        select <include refid="ALIAXS_BASE_COLUMN"/>, s.name shopsName
+        from t_shops_barcode sb, t_shops s
+        where sb.shops_id=s.id and s.is_delete=0
+        <if test="shopsName != null">
+            and s.name = #{shopsName}
+        </if>
+        <if test="wechatCode != null">
+            and sb.wechat_code = #{wechatCode}
+        </if>
+        <if test="barcode != null">
+            and sb.barcode = #{barcode}
+        </if>
+        <if test="name != null">
+            and sb.name = #{name}
+        </if>
+    </select>
+
+</mapper>

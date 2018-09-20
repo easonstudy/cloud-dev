@@ -1,0 +1,75 @@
+#server
+server:
+  # 项目contextPath，一般在正式发布版本中，我们不配置
+  context-path: /
+  # 该服务绑定IP地址，启动服务器时如本机不是该IP地址则抛出异常启动失败，只有特殊需求的情况下才配置
+  #address: 192.168.0.101
+  # 错误页，指定发生错误时，跳转的URL。请查看BasicErrorController源码便知
+  error:
+     path: /error
+  # 服务端口
+  port: 8083
+  # session最大超时时间(分钟)，默认为30
+  session:
+    timeout: 60
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: utf-8
+    # tomcat最大线程数，默认为200
+    max-threads: 1000
+    # 存放Tomcat的日志、Dump等文件的临时文件夹，默认为系统的tmp文件夹（如：C:\Users\Shanhy\AppData\Local\Temp）
+    #basedir: G:/springboot-tomcat-tmp
+    # 打开Tomcat的Access日志，并可以设置日志格式的方法：
+    #server.tomcat.access-log-enabled=true
+    #server.tomcat.access-log-pattern=
+
+druid:
+  driver-class-name: com.mysql.jdbc.Driver
+  # 云票盒子 测试
+  url: jdbc:mysql://rm-wz9207nj9k41fzz20o.mysql.rds.aliyuncs.com:3306/metrocity_db_1?useUnicode=true&characterEncoding=utf-8&useSSL=false
+  username: metrocity_db_1
+  password: metrocity_db_1
+  initialSize: 5                                        #初始化连接大小
+  minIdle: 5                                            #连接池最小空闲
+  maxActive: 20                                         #连接池最大使用连接数量
+  maxWait: 60000                                        #获取连接最大等待时间
+  minEvictableIdleTimeMillis: 300000                    #配置一个连接在池中最小生存的时间，单位是毫秒
+  timeBetweenEvictionRunsMillis: 60000                  #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+
+mybatis:
+  type-aliases-package: com.cjcx.member.dto,com.cjcx.member.entity
+  mapper-locations: classpath:mapper/*/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+#开启AOP代理
+spring:
+  aop:
+    proxy-target-class: true
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    content-type: text/html
+    encoding: UTF-8
+  #redis
+  redis:
+    # Redis服务器地址
+    host: 120.79.210.194
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password: bb123456
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 100
+      # 控制一个pool最多有多少个状态为idle(空闲的)的jedis实例
+      max-idle: 100
+      # 控制一个pool最少有多少个状态为idle(空闲的)的jedis实例
+      min-idle: 0
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      # 表示当borrow(引入)一个jedis实例时，最大的等待时间，如果超过等待时间(毫秒)，则直接抛出JedisConnectionException；
+      max-wait: 1000
+    # 连接超时时间（毫秒）
+    timeout: 20000
+

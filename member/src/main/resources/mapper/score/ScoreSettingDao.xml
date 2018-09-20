@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.ScoreSettingDao">
+    <sql id="BASE_COLUMN">
+        id, name, value, remark
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into  (<include refid="BASE_COLUMN"/>)
+        values (#{id},#{name,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+    </insert>
+
+    <!--<select id="findByCondition" resultType="" parameterType="">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM
+        WHERE 1=1
+    </select>-->
+
+</mapper>

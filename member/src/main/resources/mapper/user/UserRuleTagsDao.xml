@@ -1,0 +1,58 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.UserRuleTagsDao">
+    <sql id="BASE_COLUMN">
+        id, tags_id, level_low, level_middle, level_high, update_time, update_by, create_time, create_by
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_user_rule_tags (id, tags_id, level_low,
+      level_middle, level_high, update_time,
+      update_by, create_time, create_by
+      )
+    values (#{id}, #{tagsId,jdbcType=INTEGER}, #{levelLow,jdbcType=INTEGER},
+      #{levelMiddle,jdbcType=INTEGER}, #{levelHigh,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP},
+      #{updateBy,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}
+      )
+    </insert>
+
+    <select id="findAll" resultType="UserRuleTagsDto">
+        select <include refid="BASE_COLUMN"/> from t_user_rule_tags
+    </select>
+
+    <update id="updateById" parameterType="UserRuleTagsDto">
+        update t_user_rule_tags
+        <set>
+            <if test="id != null">
+                id = #{id,jdbcType=INTEGER},
+            </if>
+            <if test="tagsId != null">
+                tags_id = #{tagsId,jdbcType=INTEGER},
+            </if>
+            <if test="levelLow != null">
+                level_low = #{levelLow,jdbcType=INTEGER},
+            </if>
+            <if test="levelMiddle != null">
+                level_middle = #{levelMiddle,jdbcType=INTEGER},
+            </if>
+            <if test="levelHigh != null">
+                level_high = #{levelHigh,jdbcType=INTEGER},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null">
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createBy != null">
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id=${id}
+    </update>
+</mapper>

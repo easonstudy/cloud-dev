@@ -1,0 +1,26 @@
+server:
+  port: 8087
+spring:
+  profiles:
+    active: dev
+  aop:
+    proxy-target-class: true
+
+
+---
+spring:
+  profiles: dev
+
+ai:
+  baidu:
+    test: true
+
+
+
+---
+spring:
+  profiles: prod
+
+ai:
+  baidu:
+    test: false

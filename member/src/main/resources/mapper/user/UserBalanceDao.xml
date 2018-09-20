@@ -1,0 +1,40 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.UserBalanceDao">
+
+    <sql id="BASE_COLUMN">
+        user_id, score
+    </sql>
+
+    <insert id="insert" parameterType="Object" >
+        INSERT INTO t_user_balance (<include refid="BASE_COLUMN" />)
+        VALUES(#{userId}, #{score})
+    </insert>
+
+
+    <update id="updateSocre" >
+        UPDATE t_user_balance SET score=#{score} WHERE id=#{id}
+    </update>
+
+    <select id="findById" resultType="UserBalanceDto" >
+        SELECT
+        <include refid="BASE_COLUMN" />
+        FROM t_user_balance WHERE user_id=#{id}
+    </select>
+
+
+    <select id="findByCondition" resultType="UserBalanceDto" parameterType="UserBalanceDto">
+        select
+            u.id,
+            u.open_id openId,
+            bal.score
+        from t_user u
+        left join
+        t_user_balance bal
+        on u.id = bal.user_id and u.is_delete=0
+    </select>
+
+
+</mapper>

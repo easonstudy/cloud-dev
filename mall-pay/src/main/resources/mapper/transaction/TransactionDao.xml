@@ -1,0 +1,77 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.pay.dao.TransactionDao">
+
+    <sql id="BASE_COLUMN">
+        id, account_day, shops_id, device_id, barcode, amount, discount, type, state, remark, graspting_time, update_time, update_by, create_time, create_by
+    </sql>
+    <sql id="ALIAXS_BASE_COLUMN">
+        tr.id, tr.account_day, tr.shops_id, tr.device_id, tr.barcode, tr.amount, tr.discount, tr.type, tr.state, tr.remark, tr.graspting_time, tr.update_time, tr.update_by, tr.create_time, tr.create_by
+    </sql>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"  parameterType="Object">
+        insert into t_transaction (<include refid="BASE_COLUMN"/>)
+        values (#{id},#{accountDay}, #{shopsId}, #{deviceId}, #{barcode},
+        #{amount}, #{discount}, #{type},   #{state}, #{remark}, #{grasptingTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP},#{updateBy,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateById" parameterType="TransactionDto">
+        UPDATE t_transaction SET
+        <if test="accountDay != null">
+            account_day = #{accountDay},
+        </if>
+        <if test="shopsId != null">
+            shops_id = #{shopsId},
+        </if>
+        <if test="deviceId != null">
+            device_id = #{deviceId},
+        </if>
+        <if test="barcode != null">
+            barcode = #{barcode},
+        </if>
+        <if test="discount != null">
+            discount = #{discount},
+        </if>
+        <if test="type != null">
+            type = #{type},
+        </if>
+        <if test="state != null">
+            state = #{state},
+        </if>
+        <if test="remark != null">
+            remark = #{remark},
+        </if>
+        <if test="grasptingTime != null">
+            graspting_time = #{grasptingTime},
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy},
+        </if>
+        update_time = now()
+        WHERE id=#{id}
+    </update>
+
+    <select id="findByCondition" resultType="TransactionDto" parameterType="TransactionDto">
+        SELECT
+          <include refid="BASE_COLUMN" />
+        FROM
+        t_transaction
+    </select>
+
+    <select id="getList" resultType="TransactionDto" parameterType="FilterDto">
+        SELECT
+        <include refid="ALIAXS_BASE_COLUMN" />, s.name shopsName, b.name goodsName
+        FROM  t_transaction tr, t_shops s, t_shops_barcode b
+        where tr.shops_id = s.id and tr.shops_id = b.shops_id and tr.barcode = b.barcode
+    </select>
+
+    <select id="getVerfiyList" resultType="TransactionDto" parameterType="TransactionDto">
+        select d.shops_id, d.device_id,s.name shopsName, b.name goodsName, b.wechat_code, b.barcode, b.amount, b.discount discount, b.remark remark
+        from t_shops_device d, t_shops_barcode b, t_shops s
+        where d.shops_id = b.shops_id and d.shops_id=s.id and d.device_id=#{deviceId} and b.barcode=#{barcode}
+    </select>
+
+</mapper>

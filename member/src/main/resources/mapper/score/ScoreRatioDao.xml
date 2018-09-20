@@ -1,0 +1,47 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.ScoreRatioDao">
+    <sql id="BASE_COLUMN">
+        id, name, ratio, is_delete, remark, update_time, update_by, create_time, create_by
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_score_ratio (<include refid="BASE_COLUMN"/>)
+        values (#{id},#{name,jdbcType=VARCHAR}, #{ratio,jdbcType=DOUBLE}, #{isDelete},
+        #{remark}, #{updateTime,jdbcType=TIMESTAMP},
+        #{updateBy,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="findAll" resultType="ScoreRatioDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_score_ratio
+        order by is_delete, name
+    </select>
+
+    <update id="updateById" parameterType="UserLevelDto">
+        update t_score_ratio
+        set
+        <if test="name != null">
+            name = #{name,jdbcType=INTEGER},
+        </if>
+        <if test="ratio != null">
+            ratio = #{ratio,jdbcType=VARCHAR},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="remark != null">
+            remark = #{remark},
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy,jdbcType=VARCHAR},
+        </if>
+        update_time = now()
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+
+</mapper>

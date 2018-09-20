@@ -1,0 +1,67 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.StaffDao">
+
+    <sql id="BASE_COLUMN">
+        id, user_name, password, role_id, nick_name,  email, is_delete, login_time, login_ip, last_login_time, create_time, update_time
+    </sql>
+
+    <insert id="insert" parameterType="Object" >
+        INSERT INTO t_staff (<include refid="BASE_COLUMN" />)
+        VALUES(#{id}, #{userName}, #{password}, #{roleId}, #{nickName}, #{email}, 0, null, null, null, #{createTime}, null)
+    </insert>
+
+
+    <update id="updateById" parameterType="StaffDto">
+        UPDATE t_staff SET
+        <if test="password != null">
+            password = #{password},
+        </if>
+        <if test="nickName != null">
+            nick_name = #{nickName},
+        </if>
+        <if test="roleId != null">
+            role_id = #{roleId},
+        </if>
+        <if test="email != null">
+            email = #{email},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        update_time = now()
+        WHERE id=#{id}
+    </update>
+
+    <select id="login" parameterMap="getLoginMap" statementType="CALLABLE">
+        call SP_LOGIN (?, ?, ?, ?)
+    </select>
+    <parameterMap type="java.util.Map" id="getLoginMap">
+        <parameter property="username" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="pwd" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="ip" mode="IN" jdbcType="VARCHAR"/>
+        <parameter property="token_out" mode="OUT" jdbcType="VARCHAR"/>
+    </parameterMap>
+
+    <select id="findById" resultType="StaffDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_staff WHERE id=#{id}
+    </select>
+
+    <select id="findByToken" resultType="StaffDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_staff WHERE token=#{token}
+    </select>
+
+    <select id="findByCondition" resultType="StaffDto" parameterType="StaffDto">
+        SELECT
+          <include refid="BASE_COLUMN"/>
+        FROM
+        t_staff
+        WHERE 1=1
+    </select>
+</mapper>

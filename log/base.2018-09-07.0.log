@@ -1,0 +1,261 @@
+[INFO ] 10:36:12.581 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 6392 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 10:36:12.593 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 10:36:19.748 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 10:36:22.389 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 10:36:22.589 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 10:36:25.074 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 10:36:25.167 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:91
+[INFO ] 10:36:25.169 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:93ms
+[INFO ] 10:36:25.169 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 10:36:25.189 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 13.849 seconds (JVM running for 20.095)
+[INFO ] 10:40:00.083 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:78ms
+[INFO ] 10:41:59.994 [http-nio-8089-exec-8] c.c.p.s.user.impl.TransactionService - 请求参数PayDto(deviceId=00000001, barcode=6924097901351, date=20180907110000)
+[INFO ] 10:41:59.995 [http-nio-8089-exec-8] c.c.p.s.user.impl.TransactionService - 设备Id:00000001,条码:6924097901351, 日期:20180907110000
+[INFO ] 10:41:59.998 [http-nio-8089-exec-8] c.c.p.s.user.impl.TransactionService - 查询DB参数:TransactionDto{accountDay=null, shopsId=null, shopsName=null, goodsName=null, deviceId='00000001', barcode='6924097901351', amount=0.0, discount=0.0, type=0, state=0, grasptingTime=null, id=null, updateTime=null, updateBy='null', createTime=null, createBy='null'}
+[INFO ] 10:42:00.015 [http-nio-8089-exec-8] c.c.p.s.user.impl.TransactionService - 查询DB结果, 条数:1
+[INFO ] 10:42:00.017 [http-nio-8089-exec-8] c.c.p.s.user.impl.TransactionService - TransactionDto{accountDay=null, shopsId=1, shopsName=禹城体育, goodsName=D, deviceId='00000001', barcode='6924097901351', amount=4.0, discount=0.0, type=0, state=0, grasptingTime=null, id=null, updateTime=null, updateBy='null', createTime=null, createBy='null'}
+[INFO ] 10:42:00.264 [http-nio-8089-exec-8] c.c.p.s.user.impl.TransactionService - main do something
+[INFO ] 10:42:00.266 [async-task1] c.c.pay.service.user.impl.PayService - async method start, async-task1
+[INFO ] 10:42:03.050 [async-task1] c.c.pay.service.user.impl.PayService - 请求支付返回结果:{}{"stateCode":"00","stateMessage":"保存成功"}
+[INFO ] 10:42:03.066 [async-task1] c.c.pay.service.user.impl.PayService - success:{}, readay update db00
+[INFO ] 10:42:03.268 [async-task1] c.c.pay.service.user.impl.PayService - async method end
+[INFO ] 10:47:18.058 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 4044 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 10:47:18.064 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 10:47:23.058 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 10:47:25.468 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 10:47:25.668 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 10:47:28.428 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 10:47:28.499 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:70
+[INFO ] 10:47:28.500 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:71ms
+[INFO ] 10:47:28.500 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 10:47:28.515 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 11.141 seconds (JVM running for 16.034)
+[INFO ] 10:47:35.784 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - 请求参数PayDto(deviceId=00000001, barcode=6924097901351, date=20180907110000)
+[INFO ] 10:47:35.785 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - 设备Id:00000001,条码:6924097901351, 日期:20180907110000
+[INFO ] 10:47:35.786 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - 查询DB参数:TransactionDto{accountDay=null, shopsId=null, shopsName=null, goodsName=null, deviceId='00000001', barcode='6924097901351', amount=0.0, discount=0.0, type=0, state=0, grasptingTime=null, id=null, updateTime=null, updateBy='null', createTime=null, createBy='null'}
+[INFO ] 10:47:35.824 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - 查询DB结果, 条数:1
+[INFO ] 10:47:35.825 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - TransactionDto{accountDay=null, shopsId=1, shopsName=禹城体育, goodsName=D, deviceId='00000001', barcode='6924097901351', amount=4.0, discount=0.0, type=0, state=0, grasptingTime=null, id=null, updateTime=null, updateBy='null', createTime=null, createBy='null'}
+[INFO ] 10:47:35.882 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - main do something
+[INFO ] 10:47:35.883 [async-task1] c.c.pay.service.user.impl.PayService - async method start, async-task1
+[INFO ] 10:47:41.966 [async-task1] c.c.pay.service.user.impl.PayService - 返回消息 code:00, message:保存成功
+[INFO ] 10:48:11.218 [async-task1] c.c.pay.service.user.impl.PayService - async method end
+[INFO ] 10:52:29.743 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 8232 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 10:52:29.752 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 10:52:35.729 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 10:52:37.767 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 10:52:37.921 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 10:52:40.397 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 10:52:40.478 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:79
+[INFO ] 10:52:40.478 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:79ms
+[INFO ] 10:52:40.479 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 10:52:40.496 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 11.655 seconds (JVM running for 14.016)
+[INFO ] 10:53:23.662 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 请求参数PayDto(deviceId=00000001, barcode=6924097901351, date=20180907110000)
+[INFO ] 10:53:23.662 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 设备Id:00000001,条码:6924097901351, 日期:20180907110000
+[INFO ] 10:53:23.663 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 查询DB参数:TransactionDto{accountDay=null, shopsId=null, shopsName=null, goodsName=null, deviceId='00000001', barcode='6924097901351', amount=0.0, discount=0.0, type=0, state=0, grasptingTime=null, id=null, updateTime=null, updateBy='null', createTime=null, createBy='null'}
+[INFO ] 10:53:23.684 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 查询DB结果, 条数:1
+[INFO ] 10:53:23.685 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - TransactionDto{accountDay=null, shopsId=1, shopsName=禹城体育, goodsName=D, deviceId='00000001', barcode='6924097901351', amount=4.0, discount=0.0, type=0, state=0, grasptingTime=null, id=null, updateTime=null, updateBy='null', createTime=null, createBy='null'}
+[INFO ] 10:53:23.739 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - main do something
+[INFO ] 10:53:23.763 [async-task1] c.c.pay.service.user.impl.PayService - async method start, async-task1
+[INFO ] 10:53:25.981 [async-task1] c.c.pay.service.user.impl.PayService - 返回消息 code:00, message:保存成功
+[INFO ] 10:53:26.034 [async-task1] c.c.pay.service.user.impl.PayService - async method end
+[INFO ] 12:00:08.663 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 6192 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 12:00:08.668 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 12:00:13.113 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 12:00:14.955 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 12:00:15.112 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 12:00:16.826 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 12:00:16.872 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:44
+[INFO ] 12:00:16.874 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:46ms
+[INFO ] 12:00:16.876 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 12:00:16.887 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 9.408 seconds (JVM running for 12.301)
+[INFO ] 12:03:37.371 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 8920 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 12:03:37.377 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 12:03:41.527 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 12:03:43.332 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 12:03:43.464 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 12:03:45.152 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 12:03:45.203 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:50
+[INFO ] 12:03:45.204 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:51ms
+[INFO ] 12:03:45.206 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 12:03:45.217 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 9.037 seconds (JVM running for 11.007)
+[INFO ] 12:04:02.252 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:04:02.254 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:05:00.089 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:86ms
+[INFO ] 12:10:02.073 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2066ms
+[INFO ] 12:10:12.101 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:10:12.101 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:10:24.889 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 9632 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 12:10:24.894 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 12:10:29.730 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 12:10:31.732 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 12:10:31.878 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 12:10:33.730 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 12:10:33.789 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:57
+[INFO ] 12:10:33.791 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:59ms
+[INFO ] 12:10:33.793 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 12:10:33.805 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 9.865 seconds (JVM running for 11.74)
+[INFO ] 12:10:45.178 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Around Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:10:45.179 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:10:45.181 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:11:47.961 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 8160 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 12:11:47.970 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 12:11:52.422 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 12:11:54.748 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 12:11:54.884 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 12:11:56.766 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 12:11:56.818 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:51
+[INFO ] 12:11:56.819 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:52ms
+[INFO ] 12:11:56.820 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 12:11:56.838 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 9.72 seconds (JVM running for 11.559)
+[INFO ] 12:12:15.365 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Before Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:12:15.370 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:12:15.372 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String))
+[INFO ] 12:15:00.046 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:42ms
+[INFO ] 12:20:02.051 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2044ms
+[INFO ] 12:34:12.788 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 9344 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 12:34:12.793 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 12:34:17.378 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 12:34:19.226 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 12:34:19.361 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 12:34:21.233 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 12:34:21.289 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:54
+[INFO ] 12:34:21.291 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:56ms
+[INFO ] 12:34:21.293 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 12:34:21.305 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 9.32 seconds (JVM running for 11.473)
+[INFO ] 12:34:54.895 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Before Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:34:54.896 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint toString(): execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:34:54.897 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - ===========参数=========
+[INFO ] 12:34:54.897 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint target: com.cjcx.pay.service.user.impl.AopService@13fed1ec
+[INFO ] 12:34:54.898 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - ===========参数=========
+[INFO ] 12:34:54.898 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - obj i:guo
+[INFO ] 12:34:54.898 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - obj i:13
+[INFO ] 12:34:54.902 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:34:54.902 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:35:00.015 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:14ms
+[INFO ] 12:37:29.911 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 4324 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 12:37:29.918 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 12:37:35.210 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 12:37:37.663 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 12:37:37.851 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 12:37:40.682 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 12:37:40.753 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:69
+[INFO ] 12:37:40.755 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:71ms
+[INFO ] 12:37:40.757 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 12:37:40.774 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 12.177 seconds (JVM running for 16.272)
+[INFO ] 12:38:31.036 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Before Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:38:31.037 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - ===========toString=========
+[INFO ] 12:38:31.039 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint toString(): execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:38:31.039 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - ===========对象=========
+[INFO ] 12:38:31.046 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint this: com.cjcx.pay.service.user.impl.AopService@6371cf2f
+[INFO ] 12:38:31.046 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - ===========参数=========
+[INFO ] 12:38:31.048 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint target: com.cjcx.pay.service.user.impl.AopService@6371cf2f
+[INFO ] 12:38:31.048 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - ===========参数=========
+[INFO ] 12:38:31.048 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - obj i:guo
+[INFO ] 12:38:31.048 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - obj i:13
+[INFO ] 12:38:31.049 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:38:31.050 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 12:40:00.034 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:29ms
+[INFO ] 12:45:02.053 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2046ms
+[INFO ] 12:50:02.078 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2068ms
+[INFO ] 13:02:49.044 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 10680 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 13:02:49.050 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 13:02:54.252 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 13:02:56.755 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 13:02:56.896 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 13:02:58.889 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 13:02:58.938 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:47
+[INFO ] 13:02:58.939 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:48ms
+[INFO ] 13:02:58.941 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 13:02:58.952 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 10.788 seconds (JVM running for 12.862)
+[INFO ] 13:03:06.552 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Around Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 13:03:06.555 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Before Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 13:03:06.557 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint toString(): execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 13:03:06.561 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getThis: com.cjcx.pay.service.user.impl.AopService@4cfa8227
+[INFO ] 13:03:06.563 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getTarget: com.cjcx.pay.service.user.impl.AopService@4cfa8227
+[INFO ] 13:03:06.563 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getSignature: String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer)
+[INFO ] 13:03:06.565 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getName: demo
+[INFO ] 13:03:06.565 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getModifiers: 1
+[INFO ] 13:03:06.565 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringType: class com.cjcx.pay.service.user.impl.AopService
+[INFO ] 13:03:06.565 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringTypeName: com.cjcx.pay.service.user.impl.AopService
+[INFO ] 13:03:06.565 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getArgs: [guo, 13]
+[INFO ] 13:03:06.566 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 13:03:06.567 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 13:03:06.567 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning returning resulthello guo, age is 13
+[INFO ] 13:05:00.037 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:33ms
+[INFO ] 13:10:02.050 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2041ms
+[INFO ] 13:15:02.031 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2024ms
+[INFO ] 13:20:02.031 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2024ms
+[INFO ] 13:25:02.026 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2020ms
+[INFO ] 13:30:02.028 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2021ms
+[INFO ] 13:35:02.033 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2026ms
+[INFO ] 13:40:02.022 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2015ms
+[INFO ] 13:45:02.034 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2027ms
+[INFO ] 13:50:02.030 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2023ms
+[INFO ] 13:55:02.042 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2035ms
+[INFO ] 14:00:02.031 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2025ms
+[INFO ] 14:05:02.039 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2029ms
+[INFO ] 14:32:55.490 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 10320 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 14:32:55.495 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 14:33:00.358 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 14:33:02.565 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 14:33:02.723 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 14:33:04.585 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 14:33:04.638 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:52
+[INFO ] 14:33:04.639 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:53ms
+[INFO ] 14:33:04.640 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 14:33:04.653 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 10.055 seconds (JVM running for 11.946)
+[INFO ] 14:33:15.901 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Before Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:33:15.902 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint toString(): execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:33:15.910 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getThis: com.cjcx.pay.service.user.impl.AopService@1640190a
+[INFO ] 14:33:15.910 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getTarget: com.cjcx.pay.service.user.impl.AopService@1640190a
+[INFO ] 14:33:15.911 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getSignature: String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer)
+[INFO ] 14:33:15.911 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getName: demo
+[INFO ] 14:33:15.912 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getModifiers: 1
+[INFO ] 14:33:15.913 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringType: class com.cjcx.pay.service.user.impl.AopService
+[INFO ] 14:33:15.913 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringTypeName: com.cjcx.pay.service.user.impl.AopService
+[INFO ] 14:33:15.913 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getArgs: [guo, 13]
+[INFO ] 14:33:15.914 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:33:15.915 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:33:15.915 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning returning resulthello guo, age is 13
+[INFO ] 14:35:00.041 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:37ms
+[INFO ] 14:40:02.042 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2035ms
+[INFO ] 14:45:02.068 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2037ms
+[INFO ] 14:46:15.163 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - Before Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:46:15.164 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint toString(): execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:46:15.166 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getThis: com.cjcx.pay.service.user.impl.AopService@1640190a
+[INFO ] 14:46:15.166 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getTarget: com.cjcx.pay.service.user.impl.AopService@1640190a
+[INFO ] 14:46:15.166 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getSignature: String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer)
+[INFO ] 14:46:15.166 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getName: demo
+[INFO ] 14:46:15.167 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getModifiers: 1
+[INFO ] 14:46:15.167 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringType: class com.cjcx.pay.service.user.impl.AopService
+[INFO ] 14:46:15.167 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringTypeName: com.cjcx.pay.service.user.impl.AopService
+[INFO ] 14:46:15.167 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getArgs: [guo, 13]
+[INFO ] 14:46:15.167 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:46:15.167 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:46:15.167 [http-nio-8089-exec-4] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning returning resulthello guo, age is 13
+[INFO ] 14:50:02.029 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2022ms
+[INFO ] 14:53:06.179 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 11912 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 14:53:06.180 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 14:53:18.826 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 14:53:22.850 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 14:53:23.196 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 14:53:27.433 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 14:53:27.620 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:185
+[INFO ] 14:53:27.622 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:187ms
+[INFO ] 14:53:27.624 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 14:53:27.679 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 25.597 seconds (JVM running for 60.219)
+[INFO ] 14:55:00.071 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:41ms
+[INFO ] 14:56:36.307 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - Before Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:56:36.308 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint toString(): execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:56:36.544 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getThis: com.cjcx.pay.service.user.impl.AopService@1fe30a3c
+[INFO ] 14:56:36.547 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getTarget: com.cjcx.pay.service.user.impl.AopService@1fe30a3c
+[INFO ] 14:56:36.548 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getSignature: String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer)
+[INFO ] 14:56:36.550 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getName: demo
+[INFO ] 14:56:36.550 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getModifiers: 1
+[INFO ] 14:56:36.550 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringType: class com.cjcx.pay.service.user.impl.AopService
+[INFO ] 14:56:36.550 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint signature getDeclaringTypeName: com.cjcx.pay.service.user.impl.AopService
+[INFO ] 14:56:36.553 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - joinPoint getArgs: [guo, 13]
+[INFO ] 14:56:36.566 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - After Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:56:36.568 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning Completed: execution(String com.cjcx.pay.service.user.impl.AopService.demo(String,Integer))
+[INFO ] 14:56:36.568 [http-nio-8089-exec-1] com.cjcx.pay.aspect.ServiceMonitor - AfterReturning returning resulthello guo, age is 13
+[INFO ] 15:00:03.551 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2049ms
+[INFO ] 15:05:02.079 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2041ms

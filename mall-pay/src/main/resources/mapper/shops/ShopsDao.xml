@@ -1,0 +1,55 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.pay.dao.ShopsDao">
+    <sql id="BASE_COLUMN">
+        id, name, phone, address, is_delete, update_time, update_by, create_time, create_by
+    </sql>
+    <sql id="ALIAXS_BASE_COLUMN">
+        s.id, s.name, s.phone, s.address, s.is_delete, s.update_time, s.update_by, s.create_time, s.create_by
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_shops (<include refid="BASE_COLUMN"/>)
+        values (#{id},#{name,jdbcType=VARCHAR}, #{phone}, #{address},
+        #{isDelete}, #{updateTime,jdbcType=TIMESTAMP},#{updateBy,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="findAll" resultType="ShopsDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_shops
+        order by is_delete desc, name desc
+    </select>
+
+    <update id="updateById" parameterType="ShopsDto">
+        update t_shops
+        set
+        <if test="name != null">
+            name = #{name,jdbcType=INTEGER},
+        </if>
+        <if test="phone != null">
+            phone = #{phone},
+        </if>
+        <if test="address != null">
+            address = #{address},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy,jdbcType=VARCHAR},
+        </if>
+        update_time = now()
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="getShopsList" resultType="ShopsDto" parameterType="FilterDto">
+        select <include refid="BASE_COLUMN"/>, t.deviceIds from t_shops s
+        left join (select shops_id, GROUP_CONCAT(device_id) deviceIds from t_shops_device GROUP BY shops_id) t
+        on s. id = t.shops_id
+    </select>
+
+</mapper>

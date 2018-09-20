@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>积分兑换 - 结果</title>
+    <script th:src="@{/js/jquery-2.1.4.min.js}"></script>
+</head>
+<body>
+<div id="msgId">正在查询中...</div>
+<div id="openId" th:text="${openId}" style="display: none"></div>
+<div id="receiptId" th:text="${receiptId}" style="display: none"></div>
+
+<script type="text/javascript">
+    var openId = window.document.getElementById("openId").innerText;
+    var receiptId = window.document.getElementById("receiptId").innerText;
+    //console.log(openId + ":" + receiptId);
+    function search() {
+        $.ajax({
+            url: '/api/v1/transaction/search',
+            method: 'get',
+            data: {'openId': openId, 'receiptId': receiptId},
+            success: function (result) {
+                console.log("result:" + result)
+                var r = JSON.parse(result);
+                if (r.errorCode == 0) {
+                    window.document.getElementById("msgId").innerText = "兑换成功";
+                } else {
+                    window.document.getElementById("msgId").innerText = "兑换失败 原因:" + r.msg;
+                }
+            }
+        })
+    };
+    setTimeout("search()", 5000);
+</script>
+</body>
+</html>

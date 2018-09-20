@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ai-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lottery" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-pay/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-server/src/main/resources/application.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/member" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/open" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pricture" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socket-server" charset="UTF-8" />
+  </component>
+</project>

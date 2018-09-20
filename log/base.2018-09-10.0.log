@@ -1,0 +1,13 @@
+[INFO ] 18:30:57.660 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 12196 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 18:30:57.671 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 18:31:08.695 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 18:31:12.391 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 18:31:12.589 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 18:31:15.428 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 18:31:15.809 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:380
+[INFO ] 18:31:15.810 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:381ms
+[INFO ] 18:31:15.811 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 18:31:15.834 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 19.605 seconds (JVM running for 23.882)
+[INFO ] 18:35:00.112 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:102ms
+[INFO ] 18:40:02.050 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2040ms
+[INFO ] 18:45:02.030 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:2019ms

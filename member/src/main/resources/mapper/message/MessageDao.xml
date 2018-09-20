@@ -1,0 +1,67 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.MessageDao">
+
+    <sql id="BASE_COLUMN">
+        id, msgtype, title, description, url, picurl, reply_key, content, state, create_time, update_time
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        INSERT INTO t_message (<include refid="BASE_COLUMN"/>)
+        VALUES(#{id}, #{msgtype}, #{title}, #{description}, #{url}, #{picurl}, #{replyKey}, #{content}, #{state},
+        #{createTime}, null)
+    </insert>
+
+
+    <update id="updateById">
+        UPDATE t_message SET
+        <if test="msgtype != null">
+            msgtype = #{msgtype},
+        </if>
+        <if test="title != null">
+            title = #{title},
+        </if>
+        <if test="description != null">
+            description = #{description},
+        </if>
+        <if test="url != null">
+            url = #{url},
+        </if>
+        <if test="picurl != null">
+            picurl = #{picurl},
+        </if>
+        <if test="replyKey != null">
+            reply_key = #{replyKey},
+        </if>
+        <if test="content != null">
+            content = #{content},
+        </if>
+        <if test="state != null">
+            state = #{state},
+        </if>
+        update_time = now()
+        WHERE id=#{id}
+    </update>
+
+    <select id="findAll" resultType="MessageDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_message
+    </select>
+
+    <select id="findByCondition" resultType="MessageDto" parameterType="MessageDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_message
+        WHERE 1=1
+        <if test="msgtype != null">
+            and msgtype = #{msgtype}
+        </if>
+        <if test="state != null">
+            and state = #{state}
+        </if>
+    </select>
+
+</mapper>

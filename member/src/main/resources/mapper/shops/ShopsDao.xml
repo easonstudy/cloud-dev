@@ -1,0 +1,66 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.ShopsDao">
+    <sql id="BASE_COLUMN">
+        id, name, phone, address, score_ratio_id, is_delete, update_time, update_by, create_time, create_by
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_shops (<include refid="BASE_COLUMN"/>)
+        values (#{id},#{name,jdbcType=VARCHAR}, #{phone}, #{address},  #{scoreRatioId,jdbcType=INTEGER},
+        #{isDelete}, #{updateTime,jdbcType=TIMESTAMP},#{updateBy,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="findAll" resultType="ScoreRatioDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_shops
+        order by is_delete desc, name
+    </select>
+
+    <update id="updateById" parameterType="ShopsDto">
+        update t_shops
+        set
+        <if test="name != null">
+            name = #{name,jdbcType=INTEGER},
+        </if>
+        <if test="phone != null">
+            phone = #{phone},
+        </if>
+        <if test="address != null">
+            address = #{address},
+        </if>
+        <if test="scoreRatioId != null">
+            score_ratio_id = #{scoreRatioId},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy,jdbcType=VARCHAR},
+        </if>
+        update_time = now()
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="getShopsList" resultType="ShopsDto" parameterType="FilterDto">
+        select
+        s.id, s.name, s.phone, s.address, s.score_ratio_id, s.is_delete,
+        s.update_time, s.update_by, s.create_time, s.create_by,
+        r.name ratioName, r.ratio
+        from  ( select * from t_shops where 1=1
+        <if test="shopsName != null">
+            and name like CONCAT('%', #{shopsName}, '%')
+        </if>
+        <if test="phone != null">
+            and phone like CONCAT('%', #{phone}, '%')
+        </if>
+        ) s
+        left join t_score_ratio r
+        on s.score_ratio_id=r.id
+    </select>
+
+</mapper>

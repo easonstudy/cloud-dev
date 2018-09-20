@@ -1,0 +1,42 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.UserLevelDao">
+    <sql id="BASE_COLUMN">
+        id, name, level
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_user_level (<include refid="BASE_COLUMN"/>)
+        values (#{id}, #{name}, #{level})
+    </insert>
+
+    <delete id="deleteById" >
+        delete from t_user_level where id=#{id}
+    </delete>
+
+    <select id="findAll" resultType="UserLevelDto">
+        select <include refid="BASE_COLUMN"/> from t_user_level
+    </select>
+
+    <select id="findByCondition" resultType="UserLevelDto" parameterType="UserLevelDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM
+        t_user_level WHERE 1=1
+        <if test="name != null">
+            and name = #{name}
+        </if>
+        <if test="level != null">
+            and level = #{level}
+        </if>
+    </select>
+
+    <update id="updateById" parameterType="UserLevelDto">
+        update t_user_level
+        set name = #{name,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+</mapper>

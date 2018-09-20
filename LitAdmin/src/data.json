@@ -1,0 +1,50 @@
+{
+  "menus": [
+    {
+      "path": "/",
+      "component": "Home",
+      "name": " 用户管理",
+      "iconCls": "el-icon-menu",
+      "menuShow": true,
+      "leaf":true,
+      "children": [
+        {"path": "/user/list", "component": "user/list", "name": "用户列表", "menuShow": true, "leaf": true}
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "积分管理",
+      "iconCls": "el-icon-menu",
+      "menuShow": true,
+      "leaf":false,
+      "children": [
+        {"path": "/balance/list", "component": "balance/list", "name": "积分列表", "menuShow": true, "leaf": true},
+        {"path": "/transaction/list", "component": "transaction/list", "name": "交易记录", "menuShow": true, "leaf": true}
+      ]
+    },
+    {
+      "path": "/",
+      "component": "Home",
+      "name": "系统管理",
+      "iconCls": "el-icon-setting",
+      "menuShow": true,
+      "leaf":false,
+      "children": [
+        {"path": "/staff/list", "component": "staff/list", "name": "管理员列表", "menuShow": true, "leaf": true},
+        {"path": "/staff/role", "component": "staff/role", "name": "角色管理", "menuShow": true, "leaf": true},
+        {"path": "/staff/permissions", "component": "staff/permissions", "name": "树结构", "menuShow": true, "leaf": true}
+      ]
+    }
+    ,{
+      "path": "/",
+      "component": "Home",
+      "redirect":"*",
+      "menuShow": false,
+      "leaf":true,
+      "children": [
+        {"path": "*", "component": "404", "name": "", "menuShow": false, "leaf": true}
+      ]
+    }
+  ]
+}

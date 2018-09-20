@@ -1,0 +1,374 @@
+[INFO ] 10:02:01.104 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 2332 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 10:02:01.121 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 10:02:06.900 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 10:02:09.590 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 10:02:12.779 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 10:02:12.877 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:97
+[INFO ] 10:02:12.878 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:98ms
+[INFO ] 10:02:12.880 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 10:02:12.898 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 12.704 seconds (JVM running for 20.544)
+[INFO ] 10:05:00.059 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:53ms
+[INFO ] 10:10:00.045 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:35ms
+[INFO ] 10:10:41.895 [http-nio-8089-exec-6] com.cjcx.pay.service.LoginService - SP_LOGIN(admin, bb123456, 0:0:0:0:0:0:0:1 null)
+[INFO ] 10:10:42.125 [http-nio-8089-exec-6] com.cjcx.pay.service.LoginService - login in:c0f6e4b8e25b88424f887fc355e874a3
+[INFO ] 10:10:42.165 [http-nio-8089-exec-6] com.cjcx.pay.api.v1.StaffController - Login user:admin, pwd:bb123456, ip:0:0:0:0:0:0:0:1 Result: {"permissions":[{"path":"/","component":"Home","name":"扫码管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":3,"parentId":0,"id":2},{"path":"/","component":"Home","name":"店铺管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":11,"parentId":0,"id":6},{"path":"/","component":"Home","name":"统计报表","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":55,"parentId":0,"id":9},{"path":"/","component":"Home","name":"系统管理","iconCls":"el-icon-setting","menuShow":true,"leaf":false,"level":1,"ordering":99,"parentId":0,"id":4},{"path":"/transaction/list","component":"transaction/list","name":"扫码记录","iconCls":"","menuShow":true,"leaf":true,"level":2,"ordering":100,"parentId":2,"id":20},{"path":"/staff/list","component":"staff/list","name":"管理员列表","menuShow":true,"leaf":true,"level":2,"ordering":103,"parentId":4,"id":40},{"path":"/staff/role","component":"staff/role","name":"角色列表","menuShow":true,"leaf":true,"level":2,"ordering":104,"parentId":4,"id":41},{"path":"/staff/permissions","component":"staff/permissions","name":"权限资源","menuShow":true,"leaf":true,"level":2,"ordering":105,"parentId":4,"id":42},{"path":"/shops/list","component":"shops/list","name":"店铺列表","menuShow":true,"leaf":true,"level":2,"ordering":109,"parentId":6,"id":60},{"path":"/shops/barcode","component":"shops/barcode","name":"商品编码","menuShow":true,"leaf":true,"level":2,"ordering":111,"parentId":6,"id":61},{"path":"/report/consume","component":"report/consume","name":"消费数据统计","menuShow":true,"leaf":true,"level":2,"ordering":113,"parentId":9,"id":90}],"errorCode":"0","user":{"nickName":"超级管理员","id":1,"userName":"admin","email":"admin@qq.com"},"token":"c0f6e4b8e25b88424f887fc355e874a3"}
+[INFO ] 10:11:51.882 [http-nio-8089-exec-2] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:11:51.898 [http-nio-8089-exec-8] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:12:07.115 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 10:12:07.254 [http-nio-8089-exec-7] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-29T10:52:04.000+0000"
+[INFO ] 10:12:14.248 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 10:12:14.329 [http-nio-8089-exec-5] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-29T10:52:04.000+0000"
+[ERROR] 10:12:14.331 [http-nio-8089-exec-5] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T02:12:07.000+0000"
+[INFO ] 10:15:00.036 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:16ms
+[INFO ] 10:17:23.320 [http-nio-8089-exec-10] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:17:46.997 [http-nio-8089-exec-7] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:20:00.048 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:39ms
+[INFO ] 10:25:00.044 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:35ms
+[INFO ] 10:30:00.145 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:135ms
+[INFO ] 10:35:00.040 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:31ms
+[INFO ] 10:40:00.048 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:38ms
+[INFO ] 10:45:00.061 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:51ms
+[INFO ] 10:50:00.038 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:28ms
+[INFO ] 10:54:57.867 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 3992 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 10:54:57.875 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 10:55:03.229 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 10:56:11.584 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 8752 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 10:56:11.590 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 10:56:16.443 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 10:56:18.166 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 10:56:20.865 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 10:56:21.009 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:142
+[INFO ] 10:56:21.010 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:143ms
+[INFO ] 10:56:21.011 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 10:56:21.029 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 10.49 seconds (JVM running for 13.341)
+[INFO ] 10:56:49.141 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:56:49.142 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:10.952 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:10.957 [http-nio-8089-exec-8] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:14.610 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:14.612 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:16.026 [http-nio-8089-exec-5] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:18.070 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:18.125 [http-nio-8089-exec-6] com.cjcx.pay.api.v1.RoleController - id:1
+[INFO ] 10:58:18.126 [http-nio-8089-exec-6] com.cjcx.pay.api.v1.RoleController - keys:2,4,6,9,20,40,41,42,60,61,62,90
+[INFO ] 10:58:21.580 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:21.597 [http-nio-8089-exec-1] com.cjcx.pay.service.LoginService - logout:c0f6e4b8e25b88424f887fc355e874a3
+[INFO ] 10:58:25.943 [http-nio-8089-exec-2] com.cjcx.pay.service.LoginService - SP_LOGIN(admin, bb123456, 0:0:0:0:0:0:0:1 null)
+[INFO ] 10:58:26.127 [http-nio-8089-exec-2] com.cjcx.pay.service.LoginService - login in:3d0978e5681f538be062aad86ac141c2
+[INFO ] 10:58:26.149 [http-nio-8089-exec-2] com.cjcx.pay.api.v1.StaffController - Login user:admin, pwd:bb123456, ip:0:0:0:0:0:0:0:1 Result: {"permissions":[{"path":"/","component":"Home","name":"扫码管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":3,"parentId":0,"id":2},{"path":"/","component":"Home","name":"店铺管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":11,"parentId":0,"id":6},{"path":"/","component":"Home","name":"统计报表","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":55,"parentId":0,"id":9},{"path":"/","component":"Home","name":"系统管理","iconCls":"el-icon-setting","menuShow":true,"leaf":false,"level":1,"ordering":99,"parentId":0,"id":4},{"path":"/transaction/list","component":"transaction/list","name":"扫码记录","iconCls":"","menuShow":true,"leaf":true,"level":2,"ordering":100,"parentId":2,"id":20},{"path":"/staff/list","component":"staff/list","name":"管理员列表","menuShow":true,"leaf":true,"level":2,"ordering":103,"parentId":4,"id":40},{"path":"/staff/role","component":"staff/role","name":"角色列表","menuShow":true,"leaf":true,"level":2,"ordering":104,"parentId":4,"id":41},{"path":"/staff/permissions","component":"staff/permissions","name":"权限资源","menuShow":true,"leaf":true,"level":2,"ordering":105,"parentId":4,"id":42},{"path":"/shops/list","component":"shops/list","name":"店铺列表","menuShow":true,"leaf":true,"level":2,"ordering":109,"parentId":6,"id":60},{"path":"/shops/barcode","component":"shops/barcode","name":"商品列表","menuShow":true,"leaf":true,"level":2,"ordering":111,"parentId":6,"id":61},{"path":"/shops/device","component":"shops/device","name":"设备列表","menuShow":true,"leaf":true,"level":2,"ordering":113,"parentId":6,"id":62},{"path":"/report/consume","component":"report/consume","name":"消费数据统计","menuShow":true,"leaf":true,"level":2,"ordering":119,"parentId":9,"id":90}],"errorCode":"0","user":{"nickName":"超级管理员","id":1,"userName":"admin","email":"admin@qq.com"},"token":"3d0978e5681f538be062aad86ac141c2"}
+[INFO ] 10:58:28.880 [http-nio-8089-exec-4] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:58:39.911 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 10:59:32.913 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 8236 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 10:59:32.914 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 10:59:37.630 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 10:59:39.747 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 10:59:42.544 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 10:59:42.676 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:129
+[INFO ] 10:59:42.679 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:132ms
+[INFO ] 10:59:42.681 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 10:59:42.703 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 11.349 seconds (JVM running for 13.985)
+[INFO ] 11:00:00.022 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:21ms
+[INFO ] 11:00:43.580 [http-nio-8089-exec-1] com.cjcx.pay.service.LoginService - logout:3d0978e5681f538be062aad86ac141c2
+[INFO ] 11:00:47.612 [http-nio-8089-exec-4] com.cjcx.pay.service.LoginService - SP_LOGIN(admin, bb123456, 0:0:0:0:0:0:0:1 null)
+[INFO ] 11:00:47.785 [http-nio-8089-exec-4] com.cjcx.pay.service.LoginService - login in:efd68bf65d04e6d12005968452d8a1fa
+[INFO ] 11:00:47.816 [http-nio-8089-exec-4] com.cjcx.pay.api.v1.StaffController - Login user:admin, pwd:bb123456, ip:0:0:0:0:0:0:0:1 Result: {"permissions":[{"path":"/","component":"Home","name":"扫码管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":3,"parentId":0,"id":2},{"path":"/","component":"Home","name":"店铺管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":11,"parentId":0,"id":6},{"path":"/","component":"Home","name":"统计报表","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":55,"parentId":0,"id":9},{"path":"/","component":"Home","name":"系统管理","iconCls":"el-icon-setting","menuShow":true,"leaf":false,"level":1,"ordering":99,"parentId":0,"id":4},{"path":"/transaction/list","component":"transaction/list","name":"扫码记录","iconCls":"","menuShow":true,"leaf":true,"level":2,"ordering":100,"parentId":2,"id":20},{"path":"/staff/list","component":"staff/list","name":"管理员列表","menuShow":true,"leaf":true,"level":2,"ordering":103,"parentId":4,"id":40},{"path":"/staff/role","component":"staff/role","name":"角色列表","menuShow":true,"leaf":true,"level":2,"ordering":104,"parentId":4,"id":41},{"path":"/staff/permissions","component":"staff/permissions","name":"权限资源","menuShow":true,"leaf":true,"level":2,"ordering":105,"parentId":4,"id":42},{"path":"/shops/list","component":"shops/list","name":"店铺列表","menuShow":true,"leaf":true,"level":2,"ordering":109,"parentId":6,"id":60},{"path":"/shops/barcode","component":"shops/barcode","name":"商品列表","menuShow":true,"leaf":true,"level":2,"ordering":111,"parentId":6,"id":61},{"path":"/shops/device","component":"shops/device","name":"设备列表","menuShow":true,"leaf":true,"level":2,"ordering":113,"parentId":6,"id":62},{"path":"/report/consume","component":"report/consume","name":"消费数据统计","menuShow":true,"leaf":true,"level":2,"ordering":119,"parentId":9,"id":90}],"errorCode":"0","user":{"nickName":"超级管理员","id":1,"userName":"admin","email":"admin@qq.com"},"token":"efd68bf65d04e6d12005968452d8a1fa"}
+[INFO ] 11:02:27.259 [http-nio-8089-exec-2] com.cjcx.pay.service.LoginService - SP_LOGIN(admin, bb123456, 0:0:0:0:0:0:0:1 null)
+[INFO ] 11:02:27.674 [http-nio-8089-exec-2] com.cjcx.pay.service.LoginService - login in:d1cd772c8825a32ba4cd3d2146c0ef8a
+[INFO ] 11:02:27.679 [http-nio-8089-exec-2] com.cjcx.pay.api.v1.StaffController - Login user:admin, pwd:bb123456, ip:0:0:0:0:0:0:0:1 Result: {"permissions":[{"path":"/","component":"Home","name":"扫码管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":3,"parentId":0,"id":2},{"path":"/","component":"Home","name":"店铺管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":11,"parentId":0,"id":6},{"path":"/","component":"Home","name":"统计报表","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":55,"parentId":0,"id":9},{"path":"/","component":"Home","name":"系统管理","iconCls":"el-icon-setting","menuShow":true,"leaf":false,"level":1,"ordering":99,"parentId":0,"id":4},{"path":"/transaction/list","component":"transaction/list","name":"扫码记录","iconCls":"","menuShow":true,"leaf":true,"level":2,"ordering":100,"parentId":2,"id":20},{"path":"/staff/list","component":"staff/list","name":"管理员列表","menuShow":true,"leaf":true,"level":2,"ordering":103,"parentId":4,"id":40},{"path":"/staff/role","component":"staff/role","name":"角色列表","menuShow":true,"leaf":true,"level":2,"ordering":104,"parentId":4,"id":41},{"path":"/staff/permissions","component":"staff/permissions","name":"权限资源","menuShow":true,"leaf":true,"level":2,"ordering":105,"parentId":4,"id":42},{"path":"/shops/list","component":"shops/list","name":"店铺列表","menuShow":true,"leaf":true,"level":2,"ordering":109,"parentId":6,"id":60},{"path":"/shops/barcode","component":"shops/barcode","name":"商品列表","menuShow":true,"leaf":true,"level":2,"ordering":111,"parentId":6,"id":61},{"path":"/shops/device","component":"shops/device","name":"设备列表","menuShow":true,"leaf":true,"level":2,"ordering":113,"parentId":6,"id":62},{"path":"/report/consume","component":"report/consume","name":"消费数据统计","menuShow":true,"leaf":true,"level":2,"ordering":119,"parentId":9,"id":90}],"errorCode":"0","user":{"nickName":"超级管理员","id":1,"userName":"admin","email":"admin@qq.com"},"token":"d1cd772c8825a32ba4cd3d2146c0ef8a"}
+[INFO ] 11:02:29.534 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:02:30.802 [http-nio-8089-exec-7] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:02:30.809 [http-nio-8089-exec-6] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:02:32.472 [http-nio-8089-exec-10] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:02:35.742 [http-nio-8089-exec-2] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:03:19.176 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:04:22.693 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 7408 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 11:04:22.699 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 11:04:27.876 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 11:04:30.219 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 11:04:32.902 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 11:04:33.000 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:95
+[INFO ] 11:04:33.002 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:97ms
+[INFO ] 11:04:33.002 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 11:04:33.023 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 11.448 seconds (JVM running for 14.022)
+[INFO ] 11:05:00.015 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:13ms
+[INFO ] 11:05:01.133 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:05:01.225 [http-nio-8089-exec-1] com.cjcx.pay.service.LoginService - logout:d1cd772c8825a32ba4cd3d2146c0ef8a
+[INFO ] 11:05:05.889 [http-nio-8089-exec-2] com.cjcx.pay.service.LoginService - SP_LOGIN(admin, bb123456, 0:0:0:0:0:0:0:1 null)
+[INFO ] 11:05:06.081 [http-nio-8089-exec-2] com.cjcx.pay.service.LoginService - login in:87a26e1b5a755c1cd1f8d1cada3cb8f4
+[INFO ] 11:05:06.109 [http-nio-8089-exec-2] com.cjcx.pay.api.v1.StaffController - Login user:admin, pwd:bb123456, ip:0:0:0:0:0:0:0:1 Result: {"permissions":[{"path":"/","component":"Home","name":"扫码管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":3,"parentId":0,"id":2},{"path":"/","component":"Home","name":"店铺管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":11,"parentId":0,"id":6},{"path":"/","component":"Home","name":"统计报表","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":55,"parentId":0,"id":9},{"path":"/","component":"Home","name":"系统管理","iconCls":"el-icon-setting","menuShow":true,"leaf":false,"level":1,"ordering":99,"parentId":0,"id":4},{"path":"/transaction/list","component":"transaction/list","name":"扫码记录","iconCls":"","menuShow":true,"leaf":true,"level":2,"ordering":100,"parentId":2,"id":20},{"path":"/staff/list","component":"staff/list","name":"管理员列表","menuShow":true,"leaf":true,"level":2,"ordering":103,"parentId":4,"id":40},{"path":"/staff/role","component":"staff/role","name":"角色列表","menuShow":true,"leaf":true,"level":2,"ordering":104,"parentId":4,"id":41},{"path":"/staff/permissions","component":"staff/permissions","name":"权限资源","menuShow":true,"leaf":true,"level":2,"ordering":105,"parentId":4,"id":42},{"path":"/shops/list","component":"shops/list","name":"店铺列表","menuShow":true,"leaf":true,"level":2,"ordering":109,"parentId":6,"id":60},{"path":"/shops/barcode","component":"shops/barcode","name":"商品列表","menuShow":true,"leaf":true,"level":2,"ordering":111,"parentId":6,"id":61},{"path":"/shops/device","component":"shops/device","name":"设备列表","menuShow":true,"leaf":true,"level":2,"ordering":113,"parentId":6,"id":62},{"path":"/report/consume","component":"report/consume","name":"消费数据统计","menuShow":true,"leaf":true,"level":2,"ordering":119,"parentId":9,"id":90}],"errorCode":"0","user":{"nickName":"超级管理员","id":1,"userName":"admin","email":"admin@qq.com"},"token":"87a26e1b5a755c1cd1f8d1cada3cb8f4"}
+[INFO ] 11:05:13.558 [http-nio-8089-exec-5] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 11:05:13.660 [http-nio-8089-exec-8] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T02:58:40.000+0000"
+[INFO ] 11:05:24.649 [http-nio-8089-exec-7] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:05:24.725 [http-nio-8089-exec-1] c.c.pay.api.v1.ShopsDeviceController - ShopsDevice delete deviceId:10000001
+[INFO ] 11:10:00.057 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:47ms
+[INFO ] 11:17:19.595 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 8124 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 11:17:19.596 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 11:17:25.442 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 11:17:27.861 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 11:17:31.344 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 11:17:31.444 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:97
+[INFO ] 11:17:31.446 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:99ms
+[INFO ] 11:17:31.448 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 11:17:31.469 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 14.259 seconds (JVM running for 16.722)
+[INFO ] 11:17:52.480 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:17:52.526 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:17:57.502 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:17:57.520 [http-nio-8089-exec-10] com.cjcx.pay.service.LoginService - logout:87a26e1b5a755c1cd1f8d1cada3cb8f4
+[INFO ] 11:18:02.317 [http-nio-8089-exec-3] com.cjcx.pay.service.LoginService - SP_LOGIN(admin, bb123456, 0:0:0:0:0:0:0:1 null)
+[INFO ] 11:18:02.506 [http-nio-8089-exec-3] com.cjcx.pay.service.LoginService - login in:e1ae2501f8d77386b3e2b7bcf780c482
+[INFO ] 11:18:02.533 [http-nio-8089-exec-3] com.cjcx.pay.api.v1.StaffController - Login user:admin, pwd:bb123456, ip:0:0:0:0:0:0:0:1 Result: {"permissions":[{"path":"/","component":"Home","name":"扫码管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":3,"parentId":0,"id":2},{"path":"/","component":"Home","name":"店铺管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":11,"parentId":0,"id":6},{"path":"/","component":"Home","name":"统计报表","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":55,"parentId":0,"id":9},{"path":"/","component":"Home","name":"系统管理","iconCls":"el-icon-setting","menuShow":true,"leaf":false,"level":1,"ordering":99,"parentId":0,"id":4},{"path":"/transaction/list","component":"transaction/list","name":"扫码记录","iconCls":"","menuShow":true,"leaf":true,"level":2,"ordering":100,"parentId":2,"id":20},{"path":"/staff/list","component":"staff/list","name":"管理员列表","menuShow":true,"leaf":true,"level":2,"ordering":103,"parentId":4,"id":40},{"path":"/staff/role","component":"staff/role","name":"角色列表","menuShow":true,"leaf":true,"level":2,"ordering":104,"parentId":4,"id":41},{"path":"/staff/permissions","component":"staff/permissions","name":"权限资源","menuShow":true,"leaf":true,"level":2,"ordering":105,"parentId":4,"id":42},{"path":"/shops/list","component":"shops/list","name":"店铺列表","menuShow":true,"leaf":true,"level":2,"ordering":109,"parentId":6,"id":60},{"path":"/shops/barcode","component":"shops/barcode","name":"商品列表","menuShow":true,"leaf":true,"level":2,"ordering":111,"parentId":6,"id":61},{"path":"/shops/device","component":"shops/device","name":"设备列表","menuShow":true,"leaf":true,"level":2,"ordering":113,"parentId":6,"id":62},{"path":"/report/consume","component":"report/consume","name":"消费数据统计","menuShow":true,"leaf":true,"level":2,"ordering":119,"parentId":9,"id":90}],"errorCode":"0","user":{"nickName":"超级管理员","id":1,"userName":"admin","email":"admin@qq.com"},"token":"e1ae2501f8d77386b3e2b7bcf780c482"}
+[INFO ] 11:18:05.468 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:18:06.889 [http-nio-8089-exec-8] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:18:13.602 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:18:13.636 [http-nio-8089-exec-10] c.c.pay.api.v1.ShopsDeviceController - ShopsDevice delete deviceId:1
+[INFO ] 11:18:27.191 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:18:31.360 [http-nio-8089-exec-5] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 11:18:31.408 [http-nio-8089-exec-7] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T03:18:27.000+0000"
+[INFO ] 11:20:00.029 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:24ms
+[INFO ] 11:20:23.176 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 10164 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 11:20:23.188 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 11:20:28.207 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 11:20:31.367 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 11:20:34.013 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 11:20:34.131 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:115
+[INFO ] 11:20:34.134 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:118ms
+[INFO ] 11:20:34.135 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 11:20:34.155 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 12.379 seconds (JVM running for 14.79)
+[INFO ] 11:20:52.457 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 11:20:52.540 [http-nio-8089-exec-4] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T03:18:27.000+0000"
+[INFO ] 11:20:55.292 [http-nio-8089-exec-6] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:20:55.393 [http-nio-8089-exec-7] c.c.pay.api.v1.ShopsDeviceController - ShopsDevice delete deviceId:2
+[INFO ] 11:22:26.146 [http-nio-8089-exec-5] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:25:00.066 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:58ms
+[INFO ] 11:27:20.226 [http-nio-8089-exec-7] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:30:00.052 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:42ms
+[INFO ] 11:35:00.026 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:17ms
+[INFO ] 11:40:00.032 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:23ms
+[INFO ] 11:45:00.064 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:55ms
+[INFO ] 11:49:30.792 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 9688 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 11:49:30.798 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 11:49:35.811 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 11:49:37.760 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 11:49:40.479 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 11:49:40.565 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:82
+[INFO ] 11:49:40.567 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:84ms
+[INFO ] 11:49:40.567 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 11:49:40.587 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 11.293 seconds (JVM running for 13.781)
+[INFO ] 11:49:49.277 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:49:49.277 [http-nio-8089-exec-2] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:49:51.587 [http-nio-8089-exec-6] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 11:50:00.013 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:12ms
+[INFO ] 11:55:00.033 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:24ms
+[INFO ] 12:00:00.106 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:97ms
+[INFO ] 12:00:36.625 [http-nio-8089-exec-4] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 12:05:00.062 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:29ms
+[INFO ] 12:10:00.045 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:35ms
+[INFO ] 12:15:00.043 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:33ms
+[INFO ] 12:19:52.968 [http-nio-8089-exec-2] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 12:20:00.029 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:19ms
+[INFO ] 12:25:00.026 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:16ms
+[INFO ] 12:30:00.166 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:146ms
+[INFO ] 12:35:00.085 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:74ms
+[INFO ] 12:40:00.039 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:30ms
+[INFO ] 12:45:00.124 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:115ms
+[INFO ] 12:50:00.041 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:31ms
+[INFO ] 12:55:00.044 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:35ms
+[INFO ] 13:00:00.037 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:27ms
+[INFO ] 13:05:00.064 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:52ms
+[INFO ] 13:10:00.037 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:27ms
+[INFO ] 13:15:00.037 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:28ms
+[INFO ] 13:20:00.027 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:18ms
+[INFO ] 13:25:00.034 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:24ms
+[INFO ] 13:30:00.081 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:71ms
+[INFO ] 13:35:00.042 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:33ms
+[INFO ] 13:40:00.082 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:72ms
+[INFO ] 13:45:00.041 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:30ms
+[INFO ] 13:50:00.038 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:29ms
+[INFO ] 13:55:00.025 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:16ms
+[INFO ] 14:00:00.054 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:34ms
+[INFO ] 14:05:00.046 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:37ms
+[INFO ] 14:10:00.045 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:35ms
+[INFO ] 14:15:00.030 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:21ms
+[INFO ] 14:20:00.064 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:55ms
+[INFO ] 14:25:00.027 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:17ms
+[INFO ] 14:29:46.257 [http-nio-8089-exec-4] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:29:59.300 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:29:59.304 [http-nio-8089-exec-10] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:30:00.022 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:12ms
+[INFO ] 14:30:20.851 [http-nio-8089-exec-4] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 14:30:21.263 [http-nio-8089-exec-6] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-05-16T09:30:12.000+0000"
+[ERROR] 14:30:21.299 [http-nio-8089-exec-6] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-29T04:52:33.000+0000"
+[INFO ] 14:30:21.304 [http-nio-8089-exec-6] com.cjcx.pay.api.v1.ShopsController - Shops merge:false
+[INFO ] 14:31:32.200 [http-nio-8089-exec-2] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:32:13.178 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:32:16.012 [http-nio-8089-exec-2] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:32:34.073 [http-nio-8089-exec-5] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 14:32:34.199 [http-nio-8089-exec-6] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T03:22:26.000+0000"
+[INFO ] 14:32:41.985 [http-nio-8089-exec-8] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:32:46.211 [http-nio-8089-exec-10] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:34:33.600 [http-nio-8089-exec-10] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:34:37.768 [http-nio-8089-exec-3] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:34:38.021 [http-nio-8089-exec-4] c.c.p.api.v1.ShopsBarcodeController - ShopsBarcode delete:3
+[INFO ] 14:35:00.020 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:10ms
+[INFO ] 14:35:39.170 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 14:35:39.257 [http-nio-8089-exec-3] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-29T08:33:21.000+0000"
+[INFO ] 14:35:46.119 [http-nio-8089-exec-5] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 14:35:46.215 [http-nio-8089-exec-6] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-29T08:33:21.000+0000"
+[ERROR] 14:35:46.216 [http-nio-8089-exec-6] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T06:35:39.000+0000"
+[INFO ] 14:36:09.716 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 14:36:09.756 [http-nio-8089-exec-10] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-05-16T09:30:12.000+0000"
+[ERROR] 14:36:09.759 [http-nio-8089-exec-10] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T06:30:21.000+0000"
+[INFO ] 14:36:09.759 [http-nio-8089-exec-10] com.cjcx.pay.api.v1.ShopsController - Shops merge:false
+[INFO ] 14:36:50.250 [http-nio-8089-exec-4] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[ERROR] 14:36:50.318 [http-nio-8089-exec-5] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-29T10:52:04.000+0000"
+[ERROR] 14:36:50.323 [http-nio-8089-exec-5] c.c.p.f.controller.BaseController - java.text.ParseException: Unparseable date: "2018-08-30T02:12:14.000+0000"
+[INFO ] 14:37:06.948 [http-nio-8089-exec-8] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 14:40:00.049 [cron-task2] com.cjcx.pay.cache.CacheTask - 任务: cron-task2 SystemParam 结束 用时:37ms
+[INFO ] 15:24:40.465 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 9092 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 15:24:40.470 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 15:24:47.395 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 15:24:49.374 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 15:24:52.242 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 15:24:52.326 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:81
+[INFO ] 15:24:52.328 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:83ms
+[INFO ] 15:24:52.328 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 15:24:52.345 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 13.157 seconds (JVM running for 15.625)
+[INFO ] 15:25:00.012 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:12ms
+[INFO ] 15:25:28.197 [http-nio-8089-exec-1] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 15:30:00.048 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:38ms
+[INFO ] 15:35:00.030 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:20ms
+[INFO ] 15:40:00.027 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:17ms
+[INFO ] 15:42:48.209 [http-nio-8089-exec-8] com.cjcx.pay.service.LoginService - SP_LOGIN(80000, 111111111, 0:0:0:0:0:0:0:1 null)
+[INFO ] 15:42:48.386 [http-nio-8089-exec-8] com.cjcx.pay.api.v1.StaffController - Login user:80000, pwd:111111111, ip:0:0:0:0:0:0:0:1 Result: {"errorCode":"-1"}
+[INFO ] 15:42:50.673 [http-nio-8089-exec-6] com.cjcx.pay.service.LoginService - SP_LOGIN(admin, bb123456, 0:0:0:0:0:0:0:1 null)
+[INFO ] 15:42:50.865 [http-nio-8089-exec-6] com.cjcx.pay.service.LoginService - login in:1e46409302d4a260291d1821f21ea68f
+[INFO ] 15:42:50.949 [http-nio-8089-exec-6] com.cjcx.pay.api.v1.StaffController - Login user:admin, pwd:bb123456, ip:0:0:0:0:0:0:0:1 Result: {"permissions":[{"path":"/","component":"Home","name":"扫码管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":3,"parentId":0,"id":2},{"path":"/","component":"Home","name":"店铺管理","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":11,"parentId":0,"id":6},{"path":"/","component":"Home","name":"统计报表","iconCls":"el-icon-menu","menuShow":true,"leaf":false,"level":1,"ordering":55,"parentId":0,"id":9},{"path":"/","component":"Home","name":"系统管理","iconCls":"el-icon-setting","menuShow":true,"leaf":false,"level":1,"ordering":99,"parentId":0,"id":4},{"path":"/transaction/list","component":"transaction/list","name":"扫码记录","iconCls":"","menuShow":true,"leaf":true,"level":2,"ordering":100,"parentId":2,"id":20},{"path":"/staff/list","component":"staff/list","name":"管理员列表","menuShow":true,"leaf":true,"level":2,"ordering":103,"parentId":4,"id":40},{"path":"/staff/role","component":"staff/role","name":"角色列表","menuShow":true,"leaf":true,"level":2,"ordering":104,"parentId":4,"id":41},{"path":"/staff/permissions","component":"staff/permissions","name":"权限资源","menuShow":true,"leaf":true,"level":2,"ordering":105,"parentId":4,"id":42},{"path":"/shops/list","component":"shops/list","name":"店铺列表","menuShow":true,"leaf":true,"level":2,"ordering":109,"parentId":6,"id":60},{"path":"/shops/barcode","component":"shops/barcode","name":"商品列表","menuShow":true,"leaf":true,"level":2,"ordering":111,"parentId":6,"id":61},{"path":"/shops/device","component":"shops/device","name":"设备列表","menuShow":true,"leaf":true,"level":2,"ordering":113,"parentId":6,"id":62},{"path":"/report/consume","component":"report/consume","name":"消费数据统计","menuShow":true,"leaf":true,"level":2,"ordering":119,"parentId":9,"id":90}],"errorCode":"0","user":{"nickName":"超级管理员","id":1,"userName":"admin","email":"admin@qq.com"},"token":"1e46409302d4a260291d1821f21ea68f"}
+[INFO ] 15:43:00.345 [http-nio-8089-exec-9] c.c.p.f.i.AuthTokenInterceptor - can not cast handler to HandlerMethod.class
+[INFO ] 15:45:00.033 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:22ms
+[INFO ] 15:50:00.037 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:27ms
+[INFO ] 15:55:00.050 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:41ms
+[INFO ] 16:00:00.042 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:32ms
+[INFO ] 16:05:00.060 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:50ms
+[INFO ] 16:10:00.036 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:27ms
+[INFO ] 16:15:00.043 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:32ms
+[INFO ] 16:20:00.031 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:22ms
+[INFO ] 16:25:00.087 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:77ms
+[INFO ] 16:30:00.029 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:20ms
+[INFO ] 16:35:00.034 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:25ms
+[INFO ] 16:40:00.100 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:90ms
+[INFO ] 16:45:00.044 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:33ms
+[INFO ] 16:50:00.037 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:28ms
+[INFO ] 16:55:00.032 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:23ms
+[INFO ] 17:00:00.147 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:89ms
+[INFO ] 17:32:35.777 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 4300 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 17:32:35.790 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 17:32:41.439 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 17:32:43.909 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 17:32:47.016 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 17:32:47.103 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:85
+[INFO ] 17:32:47.104 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:86ms
+[INFO ] 17:32:47.104 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 17:32:47.123 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 12.77 seconds (JVM running for 15.514)
+[INFO ] 17:35:00.062 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:58ms
+[INFO ] 17:36:25.567 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 5420 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 17:36:25.573 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 17:36:31.163 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 17:36:33.446 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 17:36:36.335 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 17:36:36.415 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:78
+[INFO ] 17:36:36.416 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:79ms
+[INFO ] 17:36:36.416 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 17:36:36.436 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 13.056 seconds (JVM running for 15.558)
+[INFO ] 17:49:06.083 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 14208 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 17:49:06.091 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 17:49:11.706 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 17:49:13.994 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 17:49:17.084 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 17:49:17.192 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:107
+[INFO ] 17:49:17.193 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:108ms
+[INFO ] 17:49:17.194 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 17:49:17.212 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 12.136 seconds (JVM running for 14.557)
+[INFO ] 17:50:00.016 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:13ms
+[INFO ] 17:55:00.046 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:36ms
+[INFO ] 17:55:46.456 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 13952 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 17:55:46.462 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 17:55:51.499 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 17:55:53.797 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 17:55:56.673 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 17:55:56.751 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:75
+[INFO ] 17:55:56.751 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:75ms
+[INFO ] 17:55:56.752 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 17:55:56.768 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 11.812 seconds (JVM running for 14.303)
+[INFO ] 17:56:05.161 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 2
+[INFO ] 17:56:05.162 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 1
+[INFO ] 17:57:40.238 [http-nio-8089-exec-3] c.c.p.s.user.impl.TransactionService - 2
+[INFO ] 17:57:40.238 [http-nio-8089-exec-3] c.c.p.s.user.impl.TransactionService - 1
+[INFO ] 18:20:36.307 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 12276 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 18:20:36.314 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 18:20:42.781 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 18:20:45.342 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 18:20:48.479 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 18:20:48.559 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:80
+[INFO ] 18:20:48.560 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:81ms
+[INFO ] 18:20:48.560 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 18:20:48.578 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 13.36 seconds (JVM running for 15.985)
+[INFO ] 18:21:01.821 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 2
+[INFO ] 18:21:01.822 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 1
+[INFO ] 18:23:45.634 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 12132 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 18:23:45.718 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 18:23:51.547 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 18:23:53.774 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 18:23:56.549 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 18:23:56.642 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:91
+[INFO ] 18:23:56.644 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:92ms
+[INFO ] 18:23:56.645 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 18:23:56.668 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 11.916 seconds (JVM running for 14.512)
+[INFO ] 18:24:11.597 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 2
+[INFO ] 18:24:12.598 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 3
+[INFO ] 18:24:12.599 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 1
+[INFO ] 18:25:00.020 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:17ms
+[INFO ] 18:30:00.085 [cron-task1] com.cjcx.pay.cache.CacheTask - 任务: cron-task1 SystemParam 结束 用时:76ms
+[INFO ] 18:33:37.489 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 7740 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 18:33:37.495 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 18:33:43.254 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 4528 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 18:33:43.291 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 18:33:45.880 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 18:33:48.346 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 18:33:49.644 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 18:33:51.921 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 18:33:52.000 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:77
+[INFO ] 18:33:52.001 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:78ms
+[INFO ] 18:33:52.002 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 18:33:52.022 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 15.657 seconds (JVM running for 18.524)
+[INFO ] 18:33:52.640 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 18:33:54.540 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 18:33:54.600 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:59
+[INFO ] 18:33:54.601 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:60ms
+[INFO ] 18:33:54.602 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 18:35:00.845 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 12676 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 18:35:00.850 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 18:35:05.658 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 18:35:07.689 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 18:35:09.729 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 18:35:09.789 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:59
+[INFO ] 18:35:09.790 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:60ms
+[INFO ] 18:35:09.790 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 18:35:09.811 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 9.878 seconds (JVM running for 11.995)
+[INFO ] 18:35:19.075 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 2
+[INFO ] 18:35:20.077 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 3
+[INFO ] 18:35:20.079 [http-nio-8089-exec-1] c.c.p.s.user.impl.TransactionService - 1
+[INFO ] 18:40:00.044 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:35ms
+[INFO ] 18:45:00.043 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:33ms
+[INFO ] 18:50:00.062 [scheduler-task1] com.cjcx.pay.cache.CacheTask - 任务: scheduler-task1 SystemParam 结束 用时:52ms
+[INFO ] 18:50:44.911 [main] com.cjcx.pay.MallPayApplication - Starting MallPayApplication on guo-PC with PID 12444 (C:\Users\guo\workspace\idea\cloud-dev\mall-pay\target\classes started by guo in C:\Users\guo\workspace\idea\cloud-dev)
+[INFO ] 18:50:44.917 [main] com.cjcx.pay.MallPayApplication - No active profile set, falling back to default profiles: default
+[INFO ] 18:50:50.677 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 18:50:53.087 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 18:50:56.837 [main] com.cjcx.pay.startup.InitServlet - InitServlet  start
+[INFO ] 18:50:56.925 [main] com.cjcx.pay.cache.CacheHolder - ===>>> Init SystemParam Put End   <<<=== All Time:86
+[INFO ] 18:50:56.925 [main] com.cjcx.pay.cache.CacheHolder - Cache 结束 用时:86ms
+[INFO ] 18:50:56.926 [main] com.cjcx.pay.startup.InitServlet - InitServlet end
+[INFO ] 18:50:56.945 [main] com.cjcx.pay.MallPayApplication - Started MallPayApplication in 13.243 seconds (JVM running for 15.648)
+[INFO ] 18:51:00.690 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - 2
+[INFO ] 18:51:01.690 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - 3
+[INFO ] 18:51:01.692 [http-nio-8089-exec-2] c.c.p.s.user.impl.TransactionService - 1

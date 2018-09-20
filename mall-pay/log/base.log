@@ -1,0 +1,23 @@
+[INFO ] 17:42:33.544 [main] com.cjcx.pay.PayTest - Starting PayTest on guo-PC with PID 13240 (started by guo in C:\Users\guo\workspace\idea\cloud-dev\mall-pay)
+[INFO ] 17:42:33.545 [main] com.cjcx.pay.PayTest - No active profile set, falling back to default profiles: default
+[INFO ] 17:42:44.723 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 17:42:48.299 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 17:42:48.583 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 17:42:55.103 [main] com.cjcx.pay.PayTest - Started PayTest in 23.618 seconds (JVM running for 28.258)
+[INFO ] 17:42:56.128 [async-task1] c.c.pay.service.user.impl.PayService - async method start, async-task1
+[INFO ] 17:44:11.279 [main] com.cjcx.pay.PayTest - Starting PayTest on guo-PC with PID 14116 (started by guo in C:\Users\guo\workspace\idea\cloud-dev\mall-pay)
+[INFO ] 17:44:11.280 [main] com.cjcx.pay.PayTest - No active profile set, falling back to default profiles: default
+[INFO ] 17:44:16.103 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 17:44:18.802 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 17:44:19.034 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 17:44:22.412 [main] com.cjcx.pay.PayTest - Started PayTest in 12.79 seconds (JVM running for 16.073)
+[INFO ] 17:44:22.535 [main] c.c.pay.service.user.impl.PayService - async method start, main
+[INFO ] 17:44:23.072 [main] c.c.pay.service.user.impl.PayService - async method end
+[INFO ] 17:45:49.523 [main] com.cjcx.pay.PayTest - Starting PayTest on guo-PC with PID 13696 (started by guo in C:\Users\guo\workspace\idea\cloud-dev\mall-pay)
+[INFO ] 17:45:49.524 [main] com.cjcx.pay.PayTest - No active profile set, falling back to default profiles: default
+[INFO ] 17:45:53.931 [main] c.c.p.f.druid.DataBaseConfiguration - 注入druid！！！
+[INFO ] 17:45:56.499 [main] c.c.p.f.config.SpringContextHolder - 获取Spring上下文...
+[INFO ] 17:45:56.708 [main] c.c.p.f.config.ThreadPoolConfig - Initializing async thread pool
+[INFO ] 17:45:59.796 [main] com.cjcx.pay.PayTest - Started PayTest in 11.867 seconds (JVM running for 14.745)
+[INFO ] 17:45:59.907 [main] c.c.pay.service.user.impl.PayService - async method start, main
+[INFO ] 17:46:00.354 [main] c.c.pay.service.user.impl.PayService - async method end

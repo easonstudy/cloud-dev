@@ -1,0 +1,113 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cjcx.member.dao.GiftDao">
+    <sql id="BASE_COLUMN">
+        id, type, code, name, score, number, url, expired_time, is_delete, update_time, update_by, create_time, create_by
+    </sql>
+
+    <insert id="insert" parameterType="Object">
+        insert into t_gift (<include refid="BASE_COLUMN"/>)
+        values (#{id}, #{type,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
+        #{score,jdbcType=DOUBLE}, #{number,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR},
+        #{expiredTime,jdbcType=TIMESTAMP}, #{isDelete}, #{updateTime,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR})
+    </insert>
+
+    <select id="findById" resultType="GiftDto">
+        SELECT
+          <include refid="BASE_COLUMN"/>
+        FROM
+        t_gift WHERE id=#{id}
+    </select>
+
+    <select id="findAll" resultType="GiftDto" >
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM
+        t_gift ORDER by is_delete, name
+    </select>
+
+
+    <select id="searchByCondition" resultType="GiftDto" parameterType="GiftDto">
+        SELECT
+        <include refid="BASE_COLUMN"/>
+        FROM t_gift
+        WHERE code like CONCAT('%', #{filterStr}, '%') or name like  CONCAT('%', #{filterStr}, '%')
+    </select>
+
+    <select id="findByCondition" resultType="GiftDto" parameterType="GiftDto" >
+        SELECT
+          <include refid="BASE_COLUMN"/>
+        FROM t_gift WHERE 1=1
+        <if test="type != null">
+            and type = #{type,jdbcType=INTEGER}
+        </if>
+        <if test="code != null">
+            and code = #{code,jdbcType=VARCHAR}
+        </if>
+        <if test="name != null">
+            and name = #{name,jdbcType=VARCHAR}
+        </if>
+        <if test="score != null">
+            and score = #{score,jdbcType=DOUBLE}
+        </if>
+        <if test="number != null">
+            and number = #{number,jdbcType=INTEGER}
+        </if>
+        <if test="url != null">
+            and url = #{url,jdbcType=VARCHAR}
+        </if>
+        <if test="expiredTime != null">
+            and expired_time = #{expiredTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="createTime != null">
+            and create_time = #{createTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="createBy != null">
+            and create_by = #{createBy,jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <update id="updateById" parameterType="UserLevelDto">
+        update t_gift
+        set
+        <if test="type != null">
+            type = #{type,jdbcType=INTEGER},
+        </if>
+        <if test="code != null">
+            code = #{code,jdbcType=VARCHAR},
+        </if>
+        <if test="name != null">
+            name = #{name,jdbcType=VARCHAR},
+        </if>
+        <if test="score != null">
+            score = #{score,jdbcType=DOUBLE},
+        </if>
+        <if test="number != null">
+            number = #{number,jdbcType=INTEGER},
+        </if>
+        <if test="url != null">
+            url = #{url,jdbcType=VARCHAR},
+        </if>
+        <if test="expiredTime != null">
+            expired_time = #{expiredTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="isDelete != null">
+            is_delete = #{isDelete},
+        </if>
+        <if test="updateBy != null">
+            update_by = #{updateBy,jdbcType=VARCHAR},
+        </if>
+        <if test="createTime != null">
+            create_time = #{createTime,jdbcType=TIMESTAMP},
+        </if>
+        <if test="createBy != null">
+            create_by = #{createBy,jdbcType=VARCHAR},
+        </if>
+        update_time = now()
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+</mapper>

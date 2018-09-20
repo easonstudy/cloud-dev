@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ai-server" />
+        <module name="java8_demo" />
+        <module name="juc_demo" />
+        <module name="lottery" />
+        <module name="mall-pay" />
+        <module name="mall-server" />
+        <module name="member" />
+        <module name="open" />
+        <module name="pricture" />
+        <module name="socket-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ai-server" target="1.8" />
+      <module name="java8_demo" target="1.8" />
+      <module name="juc_demo" target="1.8" />
+      <module name="lottery" target="1.8" />
+      <module name="mall-pay" target="1.8" />
+      <module name="mall-server" target="1.8" />
+      <module name="member" target="1.8" />
+      <module name="open" target="1.8" />
+      <module name="pricture" target="1.8" />
+      <module name="socket-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
