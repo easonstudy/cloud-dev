@@ -1,5 +1,7 @@
 package com.lottery.center.common.cqssc;
 
+import com.lottery.center.entity.CqsscResult;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Queue;
