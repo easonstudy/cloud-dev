@@ -1,0 +1,96 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'sans-serif', 'Microsoft YaHei';
+}
+.pub-mid-assist {
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+}
+ul {
+  list-style: none;
+}
+/* 选用样式 */
+.none {
+  display: none;
+}
+.activeColor {
+  color: #fe8a3d;
+}
+.inactiveColor {
+  color: #ccc;
+}
+.activeBgColor {
+  background-color: #fe8a3d !important;
+}
+.scan {
+  height: 53.33333333vw;
+  background-color: #587aa1;
+}
+.scan .div {
+  vertical-align: middle;
+  display: inline-block;
+  width: 47.5%;
+  text-align: center;
+}
+.scan .div img {
+  margin-bottom: 2.66666667vw;
+  width: 12.8vw;
+}
+.scan .div .title {
+  font-size: 4.53333333vw;
+  color: #ffffff;
+  line-height: 6.4vw;
+}
+.scan .div .details {
+  opacity: 0.5;
+  font-size: 2.66666667vw;
+  color: #ffffff;
+  line-height: 3.73333333vw;
+}
+.items {
+  padding: 2.66666667vw;
+}
+.items .item {
+  height: 29.33333333vw;
+  margin-bottom: 2.66666667vw;
+  text-align: right;
+}
+.items .item:nth-child(1) {
+  background: url('../../publicImg/points/scoreInquire.png') no-repeat;
+  background-size: 100%;
+}
+.items .item:nth-child(2) {
+  background: url('../../publicImg/points/scoreFingerpost.png') no-repeat;
+  background-size: 100%;
+}
+.items .item:nth-child(3) {
+  background: url('../../publicImg/points/scoreRecord.png') no-repeat;
+  background-size: 100%;
+}
+.items .item .content {
+  vertical-align: middle;
+  display: inline-block;
+  padding-right: 4vw;
+}
+.items .item .content .title {
+  line-height: 7.06666667vw;
+  font-size: 5.06666667vw;
+  color: #222222;
+}
+.items .item .content .details {
+  line-height: 4.4vw;
+  font-size: 3.2vw;
+  letter-spacing: 0.08vw;
+  color: #626262;
+}
+
+.scan .center {
+  vertical-align: middle;
+  display: inline-block;
+  width: 97%;
+  text-align: center;
+}

@@ -36,11 +36,11 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.corundumstudio.socketio/netty-socketio -->
-		<dependency>
+		<!--<dependency>
 			<groupId>com.corundumstudio.socketio</groupId>
 			<artifactId>netty-socketio</artifactId>
 			<version>1.7.15</version>
-		</dependency>
+		</dependency>-->
 
 		<dependency>
 			<groupId>org.jboss.marshalling</groupId>
@@ -63,7 +63,11 @@
 			<version>1.6.4</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.16.Final</version>
+		</dependency>
 	</dependencies>
 
 	<build>

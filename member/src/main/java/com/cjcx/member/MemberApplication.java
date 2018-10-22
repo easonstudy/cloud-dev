@@ -14,6 +14,14 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
 import java.util.Properties;
 
+
+/**
+ * 启动注意事项
+ *      无
+ *
+ */
+
+
 //扫描servlet 文件
 @ServletComponentScan
 //告诉Spring 哪个packages的用注解标识的类 会被spring自动扫描并且装入bean容器。

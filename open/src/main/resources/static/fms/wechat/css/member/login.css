@@ -1,0 +1,131 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'sans-serif', 'Microsoft YaHei';
+}
+.pub-mid-assist {
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+}
+ul {
+  list-style: none;
+}
+/* 选用样式 */
+.none {
+  display: none;
+}
+.activeColor {
+  color: #fe8a3d;
+}
+.inactiveColor {
+  color: #ccc;
+}
+.activeBgColor {
+  background-color: #fe8a3d !important;
+}
+body {
+  padding: 0 4.13333333vw 0 4.13333333vw;
+  font-size: 0;
+}
+.formLogin {
+  margin-top: 8.26666667vw;
+}
+.formLogin .inputDiv {
+  border-bottom: solid 0.13333333vw #ebebeb;
+  height: 12vw;
+  line-height: 12vw;
+  position: relative;
+}
+.formLogin .inputDiv .title {
+  font-size: 4.26666667vw;
+  color: #222222;
+}
+.formLogin .inputDiv input {
+  border: none;
+  font-size: 4.26666667vw;
+  margin-left: 4vw;
+  margin-right: 0.26666667vw;
+  width: 50%;
+}
+.formLogin .inputDiv img {
+  position: absolute;
+  top: 3.73333333vw;
+  right: 29.33333333vw;
+  width: 4.53333333vw;
+}
+.formLogin .safeCode .send {
+  display: inline-block;
+  height: 8vw;
+  line-height: 8vw;
+  padding-left: 2.66666667vw;
+  font-size: 3.73333333vw;
+  color: #fe8a3d;
+  border-left: 0.26666667vw solid #ebebeb;
+}
+.formLogin .note {
+  margin-top: 2.66666667vw;
+  font-size: 3.46666667vw;
+}
+.formLogin .note span {
+  color: #999999;
+}
+.formLogin .note a {
+  color: #597aa1;
+  text-decoration: none;
+}
+.formLogin button {
+  width: 92.13333333vw;
+  height: 12vw;
+  border-radius: 1.06666667vw;
+  border: none;
+  font-size: 4.53333333vw;
+  color: #ffffff;
+  margin-top: 8.4vw;
+  background-color: #cccccc;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  background-color: #222222;
+}
+.popup {
+  position: fixed;
+  top: 5vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 86.66666667vw;
+  height: 40.8vw;
+  border-radius: 2.66666667vw;
+  background-color: #ffffff;
+}
+.popup .message {
+  width: 72vw;
+  font-size: 4.8vw;
+  text-align: center;
+  color: #222222;
+  margin: 0 auto;
+  padding-top: 10.66666667vw;
+  /*padding-left: 7.33333333vw;*/
+  max-height: 13.33333333vw;
+  overflow: hidden;
+}
+.popup .option {
+  margin-top: 4vw;
+  border-top: solid 0.13333333vw #ebebeb;
+  line-height: 12.53333333vw;
+  text-align: center;
+  color: #fe8a3d;
+  font-size: 4.53333333vw;
+}
+.activeOutline {
+  outline: solid 0.26666667vw #ff0000 !important;
+}

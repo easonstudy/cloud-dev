@@ -16,6 +16,35 @@
         #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{remark, jdbcType=VARCHAR})
     </insert>
 
-
+    <select id="findByCondition" resultType="ScoreAuditReceiptDto" parameterType="ScoreAuditReceiptDto">
+        SELECT
+          <include refid="BASE_COLUMN"/>
+        FROM t_score_audit_receipt
+        WHERE 1=1
+        <if test="auditId != null">
+            and audit_id = #{auditId,jdbcType=INTEGER}
+        </if>
+        <if test="serialNo != null">
+            and serial_no = #{serialNo,jdbcType=VARCHAR}
+        </if>
+        <if test="receiptNum != null">
+            and receipt_num = #{receiptNum,jdbcType=VARCHAR}
+        </if>
+        <if test="shopsId != null">
+            and shops_id = #{shopsId,jdbcType=INTEGER}
+        </if>
+        <if test="shopsName != null">
+            and shops_name = #{shopsName,jdbcType=VARCHAR}
+        </if>
+        <if test="totalPrice != null">
+            and total_price = #{totalPrice,jdbcType=DOUBLE}
+        </if>
+        <if test="updateTime != null">
+            and update_time = #{updateTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="createTime != null">
+            and create_time = #{createTime,jdbcType=TIMESTAMP}
+        </if>
+    </select>
 
 </mapper>

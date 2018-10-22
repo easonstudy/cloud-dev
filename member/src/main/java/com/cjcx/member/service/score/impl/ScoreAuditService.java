@@ -75,19 +75,11 @@ public class ScoreAuditService extends BaseService<ScoreAuditDto, Integer> imple
     @Override
     public ResultObject addScoreAudit(ScoreAuditDto dto) {
         ResultObject r = new ResultObject();
-        try {
-            dto.setState(0);
-            dto.setCreateBy(dto.getPhone());
-            dto.setCreateTime(new Date());
-            dto.setUpdateTime(new Date());
-            dao.insert(dto);
-            logger.info("插入小票审核记录(未审核)");
-        } catch (Exception e) {
-            e.printStackTrace();
-            r.setErrCode("-10001");
-            r.setMsg("异常 插入 小票审核记录");
-            return r;
-        }
+
+        dto.setState(0);
+        dto.setCreateBy(dto.getPhone());
+        dto.setCreateTime(new Date());
+        dto.setUpdateTime(new Date());
         try {
             return this.autoAudit(dto);
         } catch (Exception e) {
@@ -133,7 +125,8 @@ public class ScoreAuditService extends BaseService<ScoreAuditDto, Integer> imple
                 return r;
             }
 
-            String reqUrl = systemParamDto.getParamValue(); //"http://www.yunpiaobox.cn:18080/mall/interface/uploadReceiptImage.service";
+            String reqUrl = systemParamDto.getParamValue();
+            //"http://www.yunpiaobox.cn:18080/mall/interface/uploadReceiptImage.service";
             Map map = new HashMap();
             map.put("serialNo", serialNo);
             map.put("url", imgUrl);
@@ -142,7 +135,8 @@ public class ScoreAuditService extends BaseService<ScoreAuditDto, Integer> imple
 
             JSONObject json = new JSONObject(result);
             Integer returnCode = json.getInt("returnCode");
-            //自动审核-解析成功
+
+            //调用OCR解析成功
             if (returnCode == 0) {
                 sr = JacksonUtil.json2Bean(json.get("data").toString(), ScanReceiptData.class);
                 logger.info("小票信息:" + sr.toString());
@@ -156,19 +150,35 @@ public class ScoreAuditService extends BaseService<ScoreAuditDto, Integer> imple
                 if (StringUtils.isEmpty(sr.getReceiptNum())) {
                    r.setErrCode("-100");
                    r.setMsg("单号未能识别");
+                   logger.info("单号未能识别");
                    return r;
                 }
 
                 //检查单号是否已经积分过
-                receipt.setReceiptNum(sr.getReceiptNum());
-                receipt.setState(0);
-                List<ScoreAuditReceiptDto> list = scoreAuditReceiptService.findByCondition(receipt);
-                if(list.size() != 0){
-                    r.setErrCode("-200");
-                    r.setMsg("该单号已积分.");
-                    return r;
+                try{
+                    logger.info("检测店铺:" + sr.getShopsId() + ", 小票号:" + sr.getReceiptNum());
+                    lock.lock();
+                    receipt.setShopsId(sr.getShopsId());
+                    receipt.setReceiptNum(sr.getReceiptNum());
+                    List<ScoreAuditReceiptDto> list = scoreAuditReceiptService.findByCondition(receipt);
+                    if(list.size() != 0){
+                        logger.info("该单号已积分");
+                        r.setErrCode("-200");
+                        r.setMsg("该单已积分.");
+                        return r;
+                    } else {
+                        logger.info("该单号未积分");
+                    }
+                } finally {
+                    lock.unlock();
                 }
 
+
+                //插入DB 待审核
+                dao.insert(dto);
+                logger.info("插入小票(未审核)记录 内容:" + dto.toString());
+
+                //放入DB 调用过程 自动审核
                 r = this.doScoreAudit(dto);
                 if (r.getErrCode().equals(ResultObject.ERRCODE_OK)) {
                     state = 0;

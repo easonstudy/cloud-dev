@@ -34,8 +34,6 @@ public class ScanReceiptData {
 
     private Double payPrice;
 
-
-
     private String payFlag;
 
 

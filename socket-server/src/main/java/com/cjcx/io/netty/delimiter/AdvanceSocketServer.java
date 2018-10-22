@@ -1,13 +1,13 @@
 package com.cjcx.io.netty.delimiter;
 
-import com.corundumstudio.socketio.SocketIOChannelInitializer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.Channel;
+import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
@@ -53,9 +53,9 @@ public class AdvanceSocketServer {
                     //初始化时只执行
                     .handler(new LoggingHandler(LogLevel.INFO))
                     //管道Pipe处理器:客 户端成功connect后才执行，这里实例化ChannelInitializer
-                    .childHandler(new SocketIOChannelInitializer() {
+                    .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
-                        protected void initChannel(Channel socketChannel) throws Exception {
+                        protected void initChannel(SocketChannel socketChannel) throws Exception {
                             ByteBuf delimiter = Unpooled.copiedBuffer(DELIMITER.getBytes());        // 获取特殊分隔符的ByteBuffer
                             socketChannel.pipeline().addLast(new DelimiterBasedFrameDecoder(128, delimiter)); // 设置特殊分隔符用于拆包
 //                          socketChannel.pipeline().addLast(new FixedLengthFrameDecoder(8));       // 设置指定长度分割  不推荐，两者选其一

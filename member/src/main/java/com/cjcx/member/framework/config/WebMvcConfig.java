@@ -8,6 +8,7 @@ import com.cjcx.member.framework.interceptor.SessionInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
@@ -33,6 +34,13 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Bean
     AuthTokenInterceptor authTokenInterceptor(){ return new AuthTokenInterceptor(); }
+
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        //super.addViewControllers(registry);
+        registry.addViewController("/").setViewName("index");
+    }
 
     /**
      * 配置拦截器

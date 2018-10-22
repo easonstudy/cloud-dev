@@ -82,7 +82,7 @@ public class CollectManager {
 
     public static void main(String[] args) {
         //开3个线程
-        //每个线程2s访问一次获取结果返回，放入队列 执行完再次去请求,
+        //每个线程3s访问一次获取结果返回，放入队列 执行完再次去请求,
         //结果 收集  集合    放入缓存
         //输出最新集合数据   一个线程输出结果
     }

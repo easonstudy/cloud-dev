@@ -4,8 +4,6 @@ import com.cjcx.wechat.open.utils.WeixinUtil;
 import weixin.popular.bean.menu.Button;
 import weixin.popular.bean.menu.MenuButtons;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -115,8 +113,8 @@ public class MenuUtil extends WeixinUtil {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }*/
-        url ="http://android-pos.cn:8085/#/app/wechat/login";
-        //String url ="http://www.yunpiaobox.cn:8085/#/app/wechat/login";
+        url ="http://android-pos.cn:8080/#/app/wechat/login";
+        //String url ="http://android-pos.cn:8085/#/app/wechat/login";
         btn.setUrl(url);
         //scope=snsapi_base     是用来获取进入页面的用户的openid的，并且是静默授权并自动跳转到回调页的。
         //                      用户感知的就是直接进入了回调页（往往是业务页面）
